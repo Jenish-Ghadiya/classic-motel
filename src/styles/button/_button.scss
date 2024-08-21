@@ -1,0 +1,5 @@
+@mixin button{
+    background-color: var(--theme-primory-color);
+    color: var(--theme-white);
+    border: none;
+}
