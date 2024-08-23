@@ -12,9 +12,10 @@ function Header() {
         setIsNavOpen(true);
         document.body.style.overflowY = "hidden";
     };
-
+    
     const closeNav = () => {
         setIsNavOpen(false);
+        document.body.style.overflowY = "auto";
     };
 
     const [dropdownOpen, setDropdownOpen] = useState(false);

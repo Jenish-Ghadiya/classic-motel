@@ -100,24 +100,29 @@ header{
 }
 
 .sidenav {
+
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 100%;
     width: 0;
-    overflow-y: hidden;
+    overflow-y: scroll;
     background-color: var(--theme-primory-color);
     padding-top: 70px;
     transition: 0.5s;
     z-index: 1000;
     &.open {
         width: 100%;
+        @media (min-width:768px) {
+            display: 0;
+        }
     }
 
     .dropdown-category {
         display: flex;
         flex-direction: column;
-        overflow: hidden;
+        overflow-y: scroll;
+
         max-height: 0;
         background-color: var(--theme-light-brown-color);
         transition: max-height 0.5s ease, padding 0.3s ease;
