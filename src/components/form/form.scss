@@ -11,6 +11,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    padding: 0 20px;
     .motel-info{
         max-height: 430px;
         height: 100%;
@@ -54,6 +55,7 @@
         border-bottom-right-radius:20px ;
         @media (max-width:837px) {
             border-radius: 20px;
+            max-height: 450px;
         }
         h2 {
             text-align: center;
