@@ -92,15 +92,15 @@
                 .services-button{
 
                     button{
+                        border: 0;
+                        background: transparent;
+                        padding: 0;
+                        overflow: hidden;
                         &:hover{
                             .border{
                                 transform: translateX(-100%);
                             }
                         }
-                        border: 0;
-                        background: transparent;
-                        padding: 0;
-                        overflow: hidden;
                         .border{
                             transition: .2s ease-in-out;
                             border-bottom: 1px solid var(--theme-light-brown-color);

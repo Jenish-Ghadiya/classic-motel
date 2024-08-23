@@ -1,4 +1,4 @@
-:root {
+// :root {
     // --theme-black-background: #000000;
     // --theme-black-text: #000000;
     // --theme-black-border: #000000;
@@ -162,7 +162,11 @@
     // --theme-dark-muted-text: #495057;
     // --theme-dark-muted-border: #495057;
 
+// }
+
+:root{
     --theme-primory-color: #53624e ;
+    --theme-primory-blure-color: #53624e62 ;
     --theme-white: #fff;
     --theme-bacground: #e0e1df;
     --theme-black: #000;
@@ -170,5 +174,9 @@
     --theme-hover-color: #b99d75;
     --theme-light-brown-color: #b99d75;
     --theme-gray: #53624e;
+    --theme-form-text: #6bb09d;
     --theme-sec-background: #F3F4F0;
+    --theme-blure-background: rgba(0,0,0, 0.4);
+    --theme-input-blure: rgba(0,0,0, 0.6);
+    
 }

@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import "./backtotop.scss"
+import React, { useEffect, useState } from 'react';
+import './backtotop.scss';
+
 function BackToTop() {
-    const [showButton, setShowButton] = useState(false);
+  const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 2) {
+      if (window.scrollY > 800) {
         setShowButton(true);
       } else {
         setShowButton(false);
@@ -13,11 +14,11 @@ function BackToTop() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    
+
     return () => {
-        window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
-}, []);
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -28,15 +29,14 @@ function BackToTop() {
 
   return (
     <>
-      {showButton && (
-        <button className="backtotop"
-          onClick={scrollToTop}
-        >
-          ↑ 
-        </button>
-      )}
+      <button
+        className={`backtotop ${showButton ? 'show' : ''}`}
+        onClick={scrollToTop}
+      >
+        ↑
+      </button>
     </>
-  )
+  );
 }
 
-export default BackToTop
+export default BackToTop;
