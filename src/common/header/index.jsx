@@ -1,6 +1,7 @@
 import React from "react";
 import "./header.scss";
 import categoryApi from "../../categoryApi/categoryApi";
+import { Link } from "react-router-dom";
 
 
 function Header() {
@@ -26,7 +27,7 @@ function Header() {
                             Tel : +91 9898 77 8888
                         </span>
                         <div className="header-enqury-btn">
-                            <button>Enquire Now</button>
+                            <Link to="/login"><button>Enquire Now</button></Link>
                         </div>
                     </div>
                 </div>
