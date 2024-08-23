@@ -25,3 +25,9 @@ a {
     background-color: var(--theme-primory-color);
     color: var(--theme-white);
 }
+
+input,
+button {
+    font-family: "Acme", sans-serif;
+    letter-spacing: .5px;
+}

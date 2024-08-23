@@ -1,3 +1,4 @@
+@import "../../styles/index.scss";
 .signup {   
     
     background: linear-gradient(90deg, rgba(30,32,41,1) 0%, rgba(185,157,112,1) 100%);
@@ -58,6 +59,7 @@
             text-align: center;
             color: var(--theme-light-brown-color);
             margin-bottom: 20px;
+            @include font30;
         }
 
         .form-group {
@@ -68,6 +70,7 @@
                 margin-bottom: 5px;
                 color: var(--theme-light-brown-color);
                 font-weight: bold;
+                @include mfont16
             }
 
             input {
@@ -94,7 +97,7 @@
             border-radius: 5px;
             border-radius: 15px;
             cursor: pointer;
-            font-size: 16px;
+            @include mfont16;
             transition: background-color 0.3s ease-in-out;
 
             &:hover {
@@ -108,9 +111,11 @@
         p{
             padding: 20px 0 0 0;
             color: var(--theme-light-brown-color);
+            @include mfont16;
             span{
                 cursor: pointer;
                 a{
+                    @include mfont16;
                     color: var(--theme-white);
                 }
             }
