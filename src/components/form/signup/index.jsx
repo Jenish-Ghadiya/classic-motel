@@ -13,29 +13,62 @@ function SignUpForm() {
     const formValid = () => {
         let isValid = true;
 
-        if (user.fullname === "") {
-            toast.error("Fullname is required");
+        if (user.fullname === "" || user.email === "" || user.password === "") {
+            toast.error("All fields is required",{
+                style: {
+                  border: '1px solid #b99d75',
+                  padding: '16px',
+                  color: '#b99d75',
+                },
+                iconTheme: {
+                  primary: '#b99d75',
+                  secondary: '#FFFAEE',
+                },
+              });
             isValid = false;
         }
+        
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email regex
         if (user.email === "") {
-            toast.error("email is required");
+            // toast.error("Email is required");
             isValid = false;
         } else if (!emailRegex.test(user.email)) {
-            toast.error("Invalid email format");
+            toast.error("Invalid email format",{
+                style: {
+                  border: '1px solid #b99d75',
+                  padding: '16px',
+                  color: '#b99d75',
+                },
+                iconTheme: {
+                  primary: '#b99d75',
+                  secondary: '#FFFAEE',
+                },
+              });
             isValid = false;
         }
 
         if (user.password === "") {
-            toast.error("Password is required");
+            // toast.error("Password is required");
             isValid = false;
         } else if (user.password.length < 8) {
-            toast.error("Password must be at least 8 characters long");
+            toast.error("Password required 8 characters long",{
+                style: {
+                  border: '1px solid #b99d75',
+                  padding: '16px',
+                  color: '#b99d75',
+                },
+                iconTheme: {
+                  primary: '#b99d75',
+                  secondary: '#FFFAEE',
+                },
+              });
             isValid = false;
         }
 
         return isValid;
     };
+
+    
 
     const handleSubmit = () => {
         if (formValid()) {
