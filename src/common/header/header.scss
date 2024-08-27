@@ -170,14 +170,14 @@ header {
 
 .menu-back-color {
     background-color: rgba(0, 0, 0, 0.5);
-    width: 0%;
+    opacity: 0;
     height: 100%;
     position: fixed;
     top: 0;
     z-index: 9999999;
     right: 0;
     &.open {
-        width: 100%;
+        opacity: 1;
         @media (min-width: 768px) {
             display: none;
         }
