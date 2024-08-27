@@ -168,20 +168,7 @@ header {
 //     }
 // }
 
-.menu-back-color {
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 9999999;
-    right: 0;
-    &.open {
-        opacity: 1;
-        @media (min-width: 768px) {
-            display: none;
-        }
-    }
+
     .menu {
         position: fixed;
         top: 0;
@@ -276,4 +263,4 @@ header {
             }
         }
     }
-}
+

@@ -85,7 +85,7 @@ function Header() {
                     </div>
                 </div>
             </div>
-            <div className={`menu-back-color ${isNavOpen ? "open" : ""}`}>
+            
                 <div  className={`menu ${isNavOpen ? "open" : ""}`}>
                     <div className="menu-header-flex">
                         <div className="menu-header-logo">
@@ -162,7 +162,6 @@ function Header() {
                         })}
                     </div> */}
                 </div>
-            </div>
         </header>
     );
 }
