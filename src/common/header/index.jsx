@@ -97,7 +97,6 @@ function Header() {
                     </div>
                     <div
                         className="side-menu-item category"
-                        onClick={toggleDropdown}
                     >
                         {categoryApi[0].category}
                     </div>
@@ -143,24 +142,10 @@ function Header() {
                     </div> */}
                     <div
                         className="side-menu-item category"
-                        onClick={toggleDropdown}
                     >
                         {categoryApi[3].category}
-                        <FaCaretDown />
                     </div>
-                    {/* <div
-                        className={`dropdown-category ${
-                            dropdownOpen ? "open" : ""
-                        }`}
-                    >
-                        {categoryApi.map((item, index) => {
-                            return (
-                                <Link to={item.path} key={index} onClick={closeNav}>
-                                    {item.category}
-                                </Link>
-                            );
-                        })}
-                    </div> */}
+                    
                 </div>
         </header>
     );
