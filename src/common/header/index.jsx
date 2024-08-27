@@ -12,7 +12,7 @@ function Header() {
         setIsNavOpen(true);
         document.body.style.overflowY = "hidden";
     };
-    
+
     const closeNav = () => {
         setIsNavOpen(false);
         document.body.style.overflowY = "auto";
@@ -25,7 +25,7 @@ function Header() {
     };
     return (
         <header>
-            <div className={`sidenav ${isNavOpen ? "open" : ""}`}>
+            {/* <div className={`sidenav ${isNavOpen ? "open" : ""}`}>
                 <div className="closebtn" onClick={closeNav}>
                     &times;
                 </div>
@@ -55,7 +55,7 @@ function Header() {
                 <Link className="menu-item" to={"/profile"} onClick={closeNav}>
                     Profile{" "}
                 </Link>
-            </div>
+            </div> */}
             <div className="header-container">
                 <div className="header-flex">
                     <div className="header-logo">
@@ -64,15 +64,15 @@ function Header() {
                     <div className="header-items">
                         {categoryApi.map((item) => (
                             <div className="header-item-flex">
-                                <span>
+                                <Link to={item.path}>
                                     {item.category}
                                     <div className="border"></div>
-                                </span>
+                                </Link>
                                 <item.icon className="down-icon" />
                             </div>
                         ))}
                         <span className="header-tel">
-                            Tel : +91 9898 77 8888
+                            Tel : +1 9898 77 8888
                         </span>
                         <div className="header-enqury-btn">
                             <Link to="/login">
@@ -84,6 +84,82 @@ function Header() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div  className={`menu ${isNavOpen ? "open" : ""}`}>
+                <div className="menu-header-flex">
+                    <div className="menu-header-logo">
+                        <p>MENU</p>
+                    </div>
+                    <div className="menu-header-close-btn" onClick={closeNav}>
+                        <p>&times;</p>
+                    </div>
+                </div>
+                <div
+                    className="side-menu-item category"
+                    onClick={toggleDropdown}
+                >
+                    {categoryApi[0].category}
+                </div>
+                <div
+                    className="side-menu-item category"
+                    onClick={toggleDropdown}
+                >
+                    {categoryApi[1].category}
+                    <FaCaretDown />
+                </div>
+                <div
+                    className={`dropdown-category ${
+                        dropdownOpen ? "open" : ""
+                    }`}
+                >
+                    {categoryApi.map((item, index) => {
+                        return (
+                            <Link to={item.path} key={index} onClick={closeNav}>
+                                {item.category}
+                            </Link>
+                        );
+                    })}
+                </div>
+                <div
+                    className="side-menu-item category"
+                    onClick={toggleDropdown}
+                >
+                    {categoryApi[2].category}
+                    <FaCaretDown />
+                </div>
+                {/* <div
+                    className={`dropdown-category ${
+                        dropdownOpen ? "open" : ""
+                    }`}
+                >
+                    {categoryApi.map((item, index) => {
+                        return (
+                            <Link to={item.path} key={index} onClick={closeNav}>
+                                {item.category}
+                            </Link>
+                        );
+                    })}
+                </div> */}
+                <div
+                    className="side-menu-item category"
+                    onClick={toggleDropdown}
+                >
+                    {categoryApi[3].category}
+                    <FaCaretDown />
+                </div>
+                {/* <div
+                    className={`dropdown-category ${
+                        dropdownOpen ? "open" : ""
+                    }`}
+                >
+                    {categoryApi.map((item, index) => {
+                        return (
+                            <Link to={item.path} key={index} onClick={closeNav}>
+                                {item.category}
+                            </Link>
+                        );
+                    })}
+                </div> */}
             </div>
         </header>
     );

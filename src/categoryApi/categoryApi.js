@@ -6,7 +6,7 @@ const categoryApi = [
     {
         category: "HOME",
         icon:FaAngleDown,
-        path: "/home",
+        path: "/",
         product: []
     },
     {

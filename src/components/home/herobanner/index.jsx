@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./herobanner.scss";
 
 function Herobanner() {
+    const [checkIn, setCheckIn] = useState("");
+  const [checkOut, setCheckOut] = useState("");
+
+  useEffect(() => {
+    const today = new Date();
+    const tomorrow = new Date() ;
+    tomorrow.setDate(today.getDate() + 1);
+    // const options = { day: 'numeric' , month: 'numeric',year: 'numeric' };
+    const formattedDate = today.toLocaleDateString();
+    const formattedDateTomorow = tomorrow.toLocaleDateString();
+    
+    setCheckIn(formattedDate);
+    setCheckOut(formattedDateTomorow);
+  }, []);
+
   return (
     <div className="herobanner-color">
             <div className="herobanner">
@@ -27,7 +42,7 @@ function Herobanner() {
                             </div>
                             <div className="motel-detail">
                                 <p>Check In</p>
-                                <span>28-04-2024</span>
+                                <span>{checkIn}</span>
                             </div>
                         </div>
                         <div className="heroabanner-sub-detail  border-right">
@@ -38,7 +53,7 @@ function Herobanner() {
                             </div>
                             <div className="motel-detail">
                                 <p>Check Out</p>
-                                <span>28-04-2024</span>
+                                <span>{checkOut}</span>
                             </div>
                         </div>
                         <div className="heroabanner-sub-detail">
