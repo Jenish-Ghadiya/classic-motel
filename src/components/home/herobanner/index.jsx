@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./herobanner.scss";
+import { Link } from 'react-router-dom';
 
 function Herobanner() {
     const [checkIn, setCheckIn] = useState("");
@@ -26,7 +27,7 @@ function Herobanner() {
                             <h1>Boutique Mountain Chalet</h1>
                             <p>The forest paradise of warmth, tranquility and restoration</p>
                             <div className="herobanner-button">
-                                <button>Enquire Now</button>
+                                <Link to="/login"><button>Enquire Now</button></Link>
                             </div>
                         </div>
                     </div>
