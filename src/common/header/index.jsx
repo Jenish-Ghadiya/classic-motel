@@ -85,81 +85,83 @@ function Header() {
                     </div>
                 </div>
             </div>
-            <div  className={`menu ${isNavOpen ? "open" : ""}`}>
-                <div className="menu-header-flex">
-                    <div className="menu-header-logo">
-                        <p>MENU</p>
+            <div className={`menu-back-color ${isNavOpen ? "open" : ""}`}>
+                <div  className={`menu ${isNavOpen ? "open" : ""}`}>
+                    <div className="menu-header-flex">
+                        <div className="menu-header-logo">
+                            <p>MENU</p>
+                        </div>
+                        <div className="menu-header-close-btn" onClick={closeNav}>
+                            <p>&times;</p>
+                        </div>
                     </div>
-                    <div className="menu-header-close-btn" onClick={closeNav}>
-                        <p>&times;</p>
+                    <div
+                        className="side-menu-item category"
+                        onClick={toggleDropdown}
+                    >
+                        {categoryApi[0].category}
                     </div>
+                    <div
+                        className="side-menu-item category"
+                        onClick={toggleDropdown}
+                    >
+                        {categoryApi[1].category}
+                        <FaCaretDown />
+                    </div>
+                    <div
+                        className={`dropdown-category ${
+                            dropdownOpen ? "open" : ""
+                        }`}
+                    >
+                        {categoryApi.map((item, index) => {
+                            return (
+                                <Link to={item.path} key={index} onClick={closeNav}>
+                                    {item.category}
+                                </Link>
+                            );
+                        })}
+                    </div>
+                    <div
+                        className="side-menu-item category"
+                        onClick={toggleDropdown}
+                    >
+                        {categoryApi[2].category}
+                        <FaCaretDown />
+                    </div>
+                    {/* <div
+                        className={`dropdown-category ${
+                            dropdownOpen ? "open" : ""
+                        }`}
+                    >
+                        {categoryApi.map((item, index) => {
+                            return (
+                                <Link to={item.path} key={index} onClick={closeNav}>
+                                    {item.category}
+                                </Link>
+                            );
+                        })}
+                    </div> */}
+                    <div
+                        className="side-menu-item category"
+                        onClick={toggleDropdown}
+                    >
+                        {categoryApi[3].category}
+                        <FaCaretDown />
+                    </div>
+                    {/* <div
+                        className={`dropdown-category ${
+                            dropdownOpen ? "open" : ""
+                        }`}
+                    >
+                        {categoryApi.map((item, index) => {
+                            return (
+                                <Link to={item.path} key={index} onClick={closeNav}>
+                                    {item.category}
+                                </Link>
+                            );
+                        })}
+                    </div> */}
                 </div>
-                <div
-                    className="side-menu-item category"
-                    onClick={toggleDropdown}
-                >
-                    {categoryApi[0].category}
-                </div>
-                <div
-                    className="side-menu-item category"
-                    onClick={toggleDropdown}
-                >
-                    {categoryApi[1].category}
-                    <FaCaretDown />
-                </div>
-                <div
-                    className={`dropdown-category ${
-                        dropdownOpen ? "open" : ""
-                    }`}
-                >
-                    {categoryApi.map((item, index) => {
-                        return (
-                            <Link to={item.path} key={index} onClick={closeNav}>
-                                {item.category}
-                            </Link>
-                        );
-                    })}
-                </div>
-                <div
-                    className="side-menu-item category"
-                    onClick={toggleDropdown}
-                >
-                    {categoryApi[2].category}
-                    <FaCaretDown />
-                </div>
-                {/* <div
-                    className={`dropdown-category ${
-                        dropdownOpen ? "open" : ""
-                    }`}
-                >
-                    {categoryApi.map((item, index) => {
-                        return (
-                            <Link to={item.path} key={index} onClick={closeNav}>
-                                {item.category}
-                            </Link>
-                        );
-                    })}
-                </div> */}
-                <div
-                    className="side-menu-item category"
-                    onClick={toggleDropdown}
-                >
-                    {categoryApi[3].category}
-                    <FaCaretDown />
-                </div>
-                {/* <div
-                    className={`dropdown-category ${
-                        dropdownOpen ? "open" : ""
-                    }`}
-                >
-                    {categoryApi.map((item, index) => {
-                        return (
-                            <Link to={item.path} key={index} onClick={closeNav}>
-                                {item.category}
-                            </Link>
-                        );
-                    })}
-                </div> */}
             </div>
         </header>
     );
