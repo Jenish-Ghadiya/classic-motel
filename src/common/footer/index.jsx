@@ -16,11 +16,11 @@ export default function Footer(){
                             <h2>CLASIC MOTEL</h2>
                             <p>Founded in 1998, Motel Resort is located on the hills of Zermatt, immersing you in the wonder of the Swiss Alps against the pure sky. Welcome to Clasicic Motel, Zermatt.</p>
                             <div className="social-icons social-icons-close">
-                                <img src={Svgimgone}/>
-                                <img src={Svgimgtwo}/>
-                                <img src={Svgimgthree}/>
-                                <img src={Svgimgfoure}/>
-                                <img src={Svgimgfive}/>
+                                <img src={Svgimgone} alt="facebook"/>
+                                <img src={Svgimgtwo} alt="insta"/>
+                                <img src={Svgimgthree} alt="message"/>
+                                <img src={Svgimgfoure} alt="twitter"/>
+                                <img src={Svgimgfive} alt="linkdin"/>
                             </div>
                         </div>
                         <div className="footer-details">
@@ -49,12 +49,12 @@ export default function Footer(){
                                     <p>Surat,Gujrat</p>
                                 </div>
                                 <div className="reachout-detail">
-                                    <img src={Svgimgthree}/>
+                                    <img src={Svgimgthree} alt="phone"/>
                                     <p>information@motel.com</p>
                                 </div>
                                 <div className="reachout-detail">
-                                    <img src={Svgimgsix}/>
-                                    <p>+91 98981 44 191</p>
+                                    <img src={Svgimgsix} alt="phone"/>
+                                    <p>+91 98987 77 666</p>
                                 </div>
                                 <div className="direction">
                                     <button>

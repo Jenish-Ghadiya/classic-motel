@@ -4,6 +4,7 @@ import Home from "../components/home";
 import SignUp from "../components/form/signup";
 import Login from "../components/form/login";
 import Error from "../common/error";
+import Blog from "../components/blog";
 
 const router = createBrowserRouter([
     {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/blogs",
-                element: <h1>blogs</h1>,
+                element: <Blog/>,
             },
         ],
     },

@@ -23,7 +23,7 @@ export default function Motelservices(){
                 <div className="motelservices-grid">
                     <div className="motelservices-card">
                         <div className="motelservices-img">
-                            <img src={Iimgone}/>
+                            <img src={Iimgone } alt="imgone"/>
                         </div>
                         <div className="motelservices-card-detail">
                             <h4>Airport Pick-up Service</h4>  
@@ -32,7 +32,7 @@ export default function Motelservices(){
                     </div>
                     <div className="motelservices-card">
                         <div className="motelservices-img">
-                            <img src={Iimgtwo}/>
+                            <img src={Iimgtwo} alt="imgtwo"/>
                         </div>
                         <div className="motelservices-card-detail">
                             <h4>Airport Pick-up Service</h4>  
@@ -41,7 +41,7 @@ export default function Motelservices(){
                     </div>
                     <div className="motelservices-card">
                         <div className="motelservices-img">
-                            <img src={Iimgthree}/>
+                            <img src={Iimgthree} alt="imgthree"/>
                         </div>
                         <div className="motelservices-card-detail">
                             <h4>Airport Pick-up Service</h4>  
@@ -50,7 +50,7 @@ export default function Motelservices(){
                     </div>
                     <div className="motelservices-card">
                         <div className="motelservices-img">
-                            <img src={Iimgfour}/>
+                            <img src={Iimgfour} alt="imgfour"/>
                         </div>
                         <div className="motelservices-card-detail">
                             <h4>Airport Pick-up Service</h4>  
@@ -59,7 +59,7 @@ export default function Motelservices(){
                     </div>
                     <div className="motelservices-card">
                         <div className="motelservices-img">
-                            <img src={Iimgfive}/>
+                            <img src={Iimgfive} alt="imgfive"/>
                         </div>
                         <div className="motelservices-card-detail">
                             <h4>Airport Pick-up Service</h4>  
@@ -68,7 +68,7 @@ export default function Motelservices(){
                     </div>
                     <div className="motelservices-card">
                         <div className="motelservices-img">
-                            <img src={Iimgsix}/>
+                            <img src={Iimgsix} alt="imgsix"/>
                         </div>
                         <div className="motelservices-card-detail">
                             <h4>Airport Pick-up Service</h4>  
@@ -77,7 +77,7 @@ export default function Motelservices(){
                     </div>
                     <div className="motelservices-card">
                         <div className="motelservices-img">
-                            <img src={Iimgseven}/>
+                            <img src={Iimgseven} alt="imgseven"/>
                         </div>
                         <div className="motelservices-card-detail">
                             <h4>Airport Pick-up Service</h4>  
@@ -86,7 +86,7 @@ export default function Motelservices(){
                     </div>
                     <div className="motelservices-card">
                         <div className="motelservices-img">
-                            <img src={Iimgeight}/>
+                            <img src={Iimgeight} alt="imgeight"/>
                         </div>
                         <div className="motelservices-card-detail">
                             <h4>Airport Pick-up Service</h4>  
@@ -95,7 +95,7 @@ export default function Motelservices(){
                     </div>
                     <div className="motelservices-card">
                         <div className="motelservices-img">
-                            <img src={Iimgnine}/>
+                            <img src={Iimgnine} alt="imgnine"/>
                         </div>
                         <div className="motelservices-card-detail">
                             <h4>Airport Pick-up Service</h4>  

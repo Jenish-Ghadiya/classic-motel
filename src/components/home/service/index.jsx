@@ -14,7 +14,7 @@ function SampleNextArrow(props) {
         className="rightarrow"
         onClick={onClick}
       >
-        <img src={Downsvg}/>
+        <img src={Downsvg} alt="Down svg"/>
       </div>
     );
 }
@@ -26,7 +26,7 @@ function SampleNextArrow(props) {
       className="leftarrow"
       onClick={onClick}
       >
-      <img src={Downsvg}/>
+      <img src={Downsvg} alt="down svg"/>
 
       </div>
     );
@@ -74,7 +74,7 @@ export default function Services(){
                         <div>
                             <div className="slider">
                                 <div className="slider-img">
-                                    <img src={Simgone}/>
+                                    <img src={Simgone} alt="slider"/>
                                     <div className="slider-img-price">
                                         <p>$400/Niight</p>
                                     </div>
@@ -114,7 +114,7 @@ export default function Services(){
                         <div>
                             <div className="slider">
                                 <div className="slider-img">
-                                    <img src={Simgtwo}/>
+                                    <img src={Simgtwo} alt="slider"/>
                                     <div className="slider-img-price">
                                         <p>$400/Niight</p>
                                     </div>
@@ -154,7 +154,7 @@ export default function Services(){
                         <div>
                             <div className="slider">
                                 <div className="slider-img">
-                                    <img src={Simgthree}/>
+                                    <img src={Simgthree} alt="slider"/>
                                     <div className="slider-img-price">
                                         <p>$400/Niight</p>
                                     </div>
@@ -194,7 +194,7 @@ export default function Services(){
                         <div>
                             <div className="slider">
                                 <div className="slider-img">
-                                    <img src={Simgfour}/>
+                                    <img src={Simgfour} alt="slider"/>
                                     <div className="slider-img-price">
                                         <p>$400/Niight</p>
                                     </div>
@@ -234,7 +234,7 @@ export default function Services(){
                         <div>
                             <div className="slider">
                                 <div className="slider-img">
-                                    <img src={Simgfive}/>
+                                    <img src={Simgfive} alt="slider"/>
                                     <div className="slider-img-price">
                                         <p>$400/Niight</p>
                                     </div>
