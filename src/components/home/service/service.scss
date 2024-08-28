@@ -11,7 +11,7 @@
             display: block;
             color: var( --theme-gray);
         }
-        h4{
+        h2{
             @include font60;
             margin: 20px 0;
             @media (max-width:768px) {
@@ -62,7 +62,7 @@
                 }
             }
             .slider-detail{
-                h5{
+                h3{
                     font-family: "Marcellus", serif;
                     font-size: 30px;
                     margin-top: 20px;

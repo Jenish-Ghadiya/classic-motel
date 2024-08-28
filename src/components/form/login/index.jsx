@@ -26,7 +26,7 @@ function Login() {
                             placeholder="Enter your password"
                         />
                     </div>
-                    <button type="submit" className="submit-btn">
+                    <button type="submit" className="submit-btn"  >
                         Login
                     </button>
                     <p>already have an account? <span><Link to="/signup" >Sign Up</Link></span></p>

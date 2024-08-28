@@ -35,3 +35,22 @@ button {
 button {
     cursor: pointer;
 }
+
+// [aria-hidden="true"] * {
+//     pointer-events: none;
+//   }
+  
+//   [aria-hidden="true"] button,
+//   [aria-hidden="true"] a,
+//   [aria-hidden="true"] input {
+//     pointer-events: none;
+//   }
+
+
+.slick-slide[aria-hidden="true"] button,
+.slick-slide[aria-hidden="true"] a {
+  pointer-events: none;
+  tab-index: -1;
+}
+
+  

@@ -13,7 +13,7 @@ export default function Outerview(){
                             <div className="outerview-second-grid-color">
                                 <div className="outerview-second-grid-items">
                                     <p>WELCOME TO MOTEl RESORT</p>
-                                    <h3>In the Heart of Banff Park, Outstanding Views</h3>
+                                    <h1>In the Heart of Banff Park, Outstanding Views</h1>
                                     <div className="outerview-second-grid-items-btn">
                                         <button>
                                             Explore the hotel
