@@ -1,0 +1,16 @@
+@import "../../../../styles/index.scss";
+
+.foodherobanner {
+    background-image: url(../../../../assets/images/Food-banner.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+    background-position: center;
+    background-size: cover;
+    h1 {
+        @include font60;
+        color: var(--theme-white);
+    }
+}

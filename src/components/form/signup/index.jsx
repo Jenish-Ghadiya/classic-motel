@@ -80,17 +80,36 @@ function SignUpForm() {
                         el.email === user.email 
                 )
             ) {
-                if (userList.find((el) => el.email === user.email)) {
-                    toast.error("email is alredy exist");
-                }
-            } else {
-                userList.push({ ...user });
-                localStorage.setItem("user", JSON.stringify(userList));
-                setUser({
-                    fullname: "",
-                    password: "",
-                    email: "",
-                });
+                toast.error("email is alredy exist",{
+                    style: {
+                      border: '1px solid #b99d75',
+                      padding: '16px',
+                      color: '#b99d75',
+                    },
+                    iconTheme: {
+                      primary: '#b99d75',
+                      secondary: '#FFFAEE',
+                    },
+                  });
+                } else {
+                    userList.push({ ...user });
+                    localStorage.setItem("user", JSON.stringify(userList));
+                    setUser({
+                        fullname: "",
+                        password: "",
+                        email: "",
+                    });
+                    toast.success("Successfully registered",{
+                        style: {
+                          border: '1px solid #b99d75',
+                          padding: '16px',
+                          color: '#b99d75',
+                        },
+                        iconTheme: {
+                          primary: '#b99d75',
+                          secondary: '#FFFAEE',
+                        },
+                      }); 
                 navigate("/login");
             }
         }

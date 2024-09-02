@@ -4,16 +4,15 @@ import Home from "../components/home";
 import SignUp from "../components/form/signup";
 import Login from "../components/form/login";
 import Error from "../common/error";
-import Blog from "../components/blog";
-
+import Category from "./category";
 const router = createBrowserRouter([
     {
-        path:"/signup",
-        element:<SignUp/>
+        path: "/signup",
+        element: <SignUp />,
     },
     {
-        path:"/login",
-        element:<Login/>
+        path: "/login",
+        element: <Login />,
     },
     {
         path: "/",
@@ -24,23 +23,15 @@ const router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: "/rooms",
-                element: <h1>rooms</h1>,
-            },
-            {
-                path: "/pages",
-                element: <h1>pages</h1>,
-            },
-            {
-                path: "/blogs",
-                element: <Blog/>,
+                path: "/:category",
+                element: <Category />,
             },
         ],
     },
     {
         path: "*",
-        element: <Error/>,
-    }
+        element: <Error />,
+    },
 ]);
 
 export default router;

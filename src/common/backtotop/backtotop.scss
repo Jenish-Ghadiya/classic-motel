@@ -6,7 +6,8 @@
   right: 50px;
   padding: 10px 10px 6px 10px;
   font-size: 16px;
-  border: 1px solid var(--theme-light-brown-color);
+  border: none;
+  background-color: var(--theme-light-brown-color);
   border-radius: 5px;
   z-index: 9999;
   cursor: pointer;
@@ -15,7 +16,6 @@
   opacity: 0;
   transform: translateY(20px); /* Start slightly below */
   pointer-events: none; /* Prevent clicking when not visible */
-  background-color: transparent;
   @media  (max-width: 768px) {
     bottom: 25px;
     right: 25px;
@@ -25,7 +25,7 @@
     height: 18px;
     background-color: transparent;
     path{
-      fill: var(--theme-light-brown-color);
+      fill: var(--theme-white);
     }
   }
 }
