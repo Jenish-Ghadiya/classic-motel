@@ -1,12 +1,12 @@
-import React from 'react'
-import FoodHeroBanner from './foodherobanner';
-import FoodChoice from './foodchoice';
+import React from "react";
+import FoodHeroBanner from "./foodherobanner";
+import Foods from "./foods";
 
 export default function ClassicFood() {
-  return (
-    <>
-      <FoodHeroBanner/>
-      <FoodChoice/>
-    </>
-  )
+    return (
+        <>
+            <FoodHeroBanner />
+            <Foods />
+        </>
+    );
 }

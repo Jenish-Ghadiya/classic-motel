@@ -1,0 +1,88 @@
+@import "../../../../styles/index.scss";
+
+.food-detail {
+    .food-detail-back{
+        display: flex;
+        align-items: center;
+        gap: 10px;  
+        margin: 20px 0;
+        button{
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            background-color: var(--theme-primory-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            border-radius: 10px;
+            .back-icon{
+                color: var(--theme-white);
+
+            }
+        }
+    }
+    .food-detail-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+        align-items: center;
+        margin: 0 20px 40px 20px;
+
+        .food-detail-img {
+            img {
+                width: 100%;
+                display: block;
+                border-radius: 20px;
+                object-fit: cover;
+            }
+        }
+        .food-detail-info{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h5{
+                @include font55;
+                color: var(--theme-black);
+            }
+            .price{
+                font-size: 20px;
+                font-weight: 600;
+                span{
+                    @include font16;
+                    padding: 0 5px 0 0;
+                    font-weight: 400;
+                    letter-spacing: .5px
+                
+                }
+            }
+            .food-detail-other-info{
+                p{
+                    @include font16;
+                    font-family: "Acme", sans-serif;
+                    line-height: normal;
+                }       
+
+            }
+            .food-detail-btn{
+                margin-top: 5px;
+                
+                button{
+                    padding: 10px 20px;
+                    line-height: normal;
+                    border-radius: 20px;
+                    border: 2px solid var(--theme-black);
+                    transition: 0.3s ease-in-out;
+                    background-color: var(--theme-white);
+                    &:hover {
+                        box-shadow: rgba(99, 99, 99, 0.8) 0px 2px 8px 0px;
+                        transform: translateY(-2px);
+                    }
+
+                }
+
+            }
+
+        }
+    }
+}

@@ -9,11 +9,10 @@ function Home() {
     return (
         <div>
             <Timer>
-
-            <Herobanner />
-            <Outerview/>
-            <Services/>
-            <Motelservices />
+                <Herobanner />
+                <Outerview />
+                <Services />
+                <Motelservices />
             </Timer>
         </div>
     );

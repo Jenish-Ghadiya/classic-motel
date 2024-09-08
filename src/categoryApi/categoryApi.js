@@ -1,6 +1,15 @@
 import { FaCaretDown } from "react-icons/fa6";
 import { FaAngleDown } from "react-icons/fa6";
 
+import Burger from "../assets/images/food/Burger.jpg";
+import Biriyani from "../assets/images/food/birayani.webp";
+import chole from "../assets/images/food/chole.jpeg";
+import Classicpizza from "../assets/images/food/classic-cheese-pizza.jpg";
+import Dhosapizza from "../assets/images/food/Dhosapizza.webp";
+import Franki from "../assets/images/food/franki.jpeg";
+import Jalebi from "../assets/images/food/jalebifafada.jpeg";
+import Momos from "../assets/images/food/momos.jpeg";
+
 const categoryApi = [
     {
         category: "HOME",
@@ -19,114 +28,122 @@ const categoryApi = [
         icon: FaAngleDown,
         micon: FaCaretDown,
         path: "/pages",
-        subcategory: [
+        subPages: [
             {
                 name: "Classic Food",
-                foodproduct: [
+                path: "/food",
+                product: [
                     {
-                        name: "Apple",
-                        price: 1000,
-                        discount: 100,
-                        category: "Fruit",
-                        availability: true,
+                        Foodname: "Classic Pizza",
+                        img: Classicpizza,
+                        price: "$200",
+                        detail: [
+                            {
+                                tyape: "Snacks, Beverages, Desserts",
+                            },
+                            {
+                                country: "Chhindwara City",
+                            },
+                        ],
+                        btn: "Add To Cart",
                     },
                     {
-                        name: "Banana",
-                        price: 2000,
-                        discount: 100,
-                        category: "Fruit",
-                        availability: true,
+                        Foodname: "Burger",
+                        img: Burger,
+                        price: "$200",
+                        detail: [
+                            {
+                                tyape: "Snacks, Beverages, Desserts",
+                            },
+                            {
+                                country: "Chhindwara City",
+                            },
+                        ],
+                        btn: "Add To Cart",
                     },
                     {
-                        name: "Orange",
-                        price: 700,
-                        discount: 140,
-                        category: "Fruit",
-                        availability: false,
+                        Foodname: "Dhosapizza",
+                        img: Dhosapizza,
+                        price: "$200",
+                        detail: [
+                            {
+                                tyape: "Snacks, Beverages, Desserts",
+                            },
+                            {
+                                country: "Chhindwara City",
+                            },
+                        ],
+                        btn: "Add To Cart",
                     },
                     {
-                        name: "Strawberry",
-                        price: 400,
-                        discount: 60,
-                        category: "Fruit",
-                        availability: true,
+                        Foodname: "Franki",
+                        img: Franki,
+                        price: "$200",
+                        detail: [
+                            {
+                                tyape: "Snacks, Beverages, Desserts",
+                            },
+                            {
+                                country: "Chhindwara City",
+                            },
+                        ],
+                        btn: "Add To Cart",
                     },
                     {
-                        name: "Broccoli",
-                        price: 230,
-                        discount: 69,
-                        category: "Vegetable",
-                        availability: true,
+                        Foodname: "Momos",
+                        img: Momos,
+                        price: "$200",
+                        detail: [
+                            {
+                                tyape: "Snacks, Beverages, Desserts",
+                            },
+                            {
+                                country: "Chhindwara City",
+                            },
+                        ],
+                        btn: "Add To Cart",
                     },
                     {
-                        name: "Carrot",
-                        price: 150,
-                        discount: 15,
-                        category: "Vegetable",
-                        availability: true,
+                        Foodname: "Biriyani",
+                        img: Biriyani,
+                        price: "$200",
+                        detail: [
+                            {
+                                tyape: "Snacks, Beverages, Desserts",
+                            },
+                            {
+                                country: "Chhindwara City",
+                            },
+                        ],
+                        btn: "Add To Cart",
                     },
                     {
-                        name: "Chicken Breast",
-                        price: 500,
-                        discount: 250,
-                        category: "Meat",
-                        availability: true,
+                        Foodname: "Chole",
+                        img: chole,
+                        price: "$200",
+                        detail: [
+                            {
+                                tyape: "Snacks, Beverages, Desserts",
+                            },
+                            {
+                                country: "Chhindwara City",
+                            },
+                        ],
+                        btn: "Add To Cart",
                     },
                     {
-                        name: "Salmon",
-                        price: 820,
-                        discount: 492,
-                        category: "Fish",
-                        availability: false,
-                    },
-                    {
-                        name: "Almonds",
-                        price: 1000,
-                        discount: 800,
-                        category: "Nuts",
-                        availability: true,
-                    },
-                    {
-                        name: "Yogurt",
-                        price: 200,
-                        discount: 40,
-                        category: "Dairy",
-                        availability: true,
-                    },
-                    {
-                        name: "Milk",
-                        price: 130,
-                        discount: 13,
-                        category: "Dairy",
-                        availability: true,
-                    },
-                    {
-                        name: "Eggs",
-                        price: 300,
-                        discount: 75,
-                        category: "Dairy",
-                        availability: false,
-                    },
-                    {
-                        name: "Bread",
-                        price: 250,
-                        discount: 50,
-                        category: "Bakery",
-                        availability: true,
-                    },
-                    {
-                        name: "Butter",
-                        price: 400,
-                        discount: 160,
-                        category: "Dairy",
-                        availability: true,
-                    },
-                    {
-                        name: "Cheese",
-                        price: 650,
-                        discount: 325,
-                        category: "Dairy",
-                        availability: true,
+                        Foodname: "Jalebi",
+                        img: Jalebi,
+                        price: "$200",
+                        detail: [
+                            {
+                                tyape: "Snacks, Beverages, Desserts",
+                            },
+                            {
+                                country: "Chhindwara City",
+                            },
+                        ],
+                        btn: "Add To Cart",
                     },
                 ],
             },

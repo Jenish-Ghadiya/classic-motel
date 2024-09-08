@@ -9,22 +9,24 @@ function SignUpForm() {
         setUser({ ...user, [e.target.name]: e.target.value });
     };
 
+    const toastdesign = {
+        style: {
+          border: '1px solid #b99d75',
+          padding: '16px',
+          color: '#b99d75',
+        },
+        iconTheme: {
+          primary: '#b99d75',
+          secondary: '#FFFAEE',
+        },
+      }
+
     const navigate = useNavigate()
     const formValid = () => {
         let isValid = true;
 
         if (user.fullname === "" || user.email === "" || user.password === "") {
-            toast.error("All fields is required",{
-                style: {
-                  border: '1px solid #b99d75',
-                  padding: '16px',
-                  color: '#b99d75',
-                },
-                iconTheme: {
-                  primary: '#b99d75',
-                  secondary: '#FFFAEE',
-                },
-              });
+            toast.error("All fields is required",toastdesign);
             isValid = false;
         }
         
@@ -33,17 +35,7 @@ function SignUpForm() {
             // toast.error("Email is required");
             isValid = false;
         } else if (!emailRegex.test(user.email)) {
-            toast.error("Invalid email format",{
-                style: {
-                  border: '1px solid #b99d75',
-                  padding: '16px',
-                  color: '#b99d75',
-                },
-                iconTheme: {
-                  primary: '#b99d75',
-                  secondary: '#FFFAEE',
-                },
-              });
+            toast.error("Invalid email format",toastdesign);
             isValid = false;
         }
 
@@ -51,17 +43,7 @@ function SignUpForm() {
             // toast.error("Password is required");
             isValid = false;
         } else if (user.password.length < 8) {
-            toast.error("Password required 8 characters long",{
-                style: {
-                  border: '1px solid #b99d75',
-                  padding: '16px',
-                  color: '#b99d75',
-                },
-                iconTheme: {
-                  primary: '#b99d75',
-                  secondary: '#FFFAEE',
-                },
-              });
+            toast.error("Password required 8 characters long",toastdesign);
             isValid = false;
         }
 
@@ -80,17 +62,7 @@ function SignUpForm() {
                         el.email === user.email 
                 )
             ) {
-                toast.error("email is alredy exist",{
-                    style: {
-                      border: '1px solid #b99d75',
-                      padding: '16px',
-                      color: '#b99d75',
-                    },
-                    iconTheme: {
-                      primary: '#b99d75',
-                      secondary: '#FFFAEE',
-                    },
-                  });
+                toast.error("email is alredy exist",toastdesign);
                 } else {
                     userList.push({ ...user });
                     localStorage.setItem("user", JSON.stringify(userList));
@@ -99,17 +71,7 @@ function SignUpForm() {
                         password: "",
                         email: "",
                     });
-                    toast.success("Successfully registered",{
-                        style: {
-                          border: '1px solid #b99d75',
-                          padding: '16px',
-                          color: '#b99d75',
-                        },
-                        iconTheme: {
-                          primary: '#b99d75',
-                          secondary: '#FFFAEE',
-                        },
-                      }); 
+                    toast.success("Successfully registered",toastdesign); 
                 navigate("/login");
             }
         }

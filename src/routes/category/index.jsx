@@ -1,35 +1,27 @@
 import { useParams } from "react-router-dom";
 import Rooms from "../../components/rooms";
 import Blog from "../../components/blog";
-import ClassicFood from "../../components/pages/classicfood";
-import Timer from "../../common/loader/loadertimer";
 import Error from "../../common/error";
+import Pages from "../../components/pages";
+import ClassicFood from "../../components/pages/classicfood";
 
 const Category = () => {
     const { category } = useParams();
 
     let content;
     switch (category) {
+        
         case "rooms":
-            content = (
-                <Timer>
-                    <Rooms />
-                </Timer>
-            );
+            content = <Rooms />;
             break;
         case "blog":
-            content = (
-                <Timer>
-                    <Blog />
-                </Timer>
-            );
+            content = <Blog />;
             break;
         case "pages":
-            content = (
-                <Timer>
-                    <ClassicFood />
-                </Timer>
-            );
+            content = <Pages />;
+            break;
+        case "food":
+            content = <ClassicFood />;
             break;
         default:
             content = <Error />;

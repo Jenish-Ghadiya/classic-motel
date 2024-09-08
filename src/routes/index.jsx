@@ -5,6 +5,7 @@ import SignUp from "../components/form/signup";
 import Login from "../components/form/login";
 import Error from "../common/error";
 import Category from "./category";
+import FoodDetail from "../components/pages/classicfood/fooddetail";
 const router = createBrowserRouter([
     {
         path: "/signup",
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
                 path: "/:category",
                 element: <Category />,
             },
+            {
+                path:"/fooddetail",
+                element:<FoodDetail/>
+            }
         ],
     },
     {
