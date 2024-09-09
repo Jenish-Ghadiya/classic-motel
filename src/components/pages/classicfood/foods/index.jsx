@@ -6,6 +6,7 @@ export default function Foods() {
 
     const Food = categoryApi[2].subPages[0].product;
 
+
     const dataIndex = (i) => {
         localStorage.setItem("foodindex", i);
         sessionStorage.setItem("scrollPosition", window.pageYOffset); // Save current scroll position
@@ -45,8 +46,8 @@ export default function Foods() {
                             </div>
                             <div className="card-detail">
                                 <h5> {item.Foodname}</h5>
-                                <p>{item.detail[0].tyape}</p>
-                                <p>{item.detail[1].country}</p>
+                                <p>{item.details[0].type}</p>
+                                <p>{item.details[1].country}</p>
                             </div>
                         </Link>
                     ))}

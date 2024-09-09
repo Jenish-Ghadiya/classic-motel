@@ -51,8 +51,8 @@ export default function FoodDetail() {
                                     {item.price}
                                 </p>
                                 <div className="food-detail-other-info">
-                                    <p>{item.detail[0].tyape}</p>
-                                    <p>{item.detail[1].country}</p>
+                                    <p>{item.details[0].type}</p>
+                                    <p>{item.details[1].country}</p>
                                 </div>
                                 <div className="food-detail-btn">
                                     <button>{item.btn}</button>
