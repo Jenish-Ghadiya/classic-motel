@@ -1,25 +1,26 @@
 import React, { useEffect } from "react";
 import "./Fooddetail.scss";
 import categoryApi from "../../../../categoryApi/categoryApi";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import toast from "react-hot-toast";
+import CardIcon from "../cardicon";
 
 export default function FoodDetail() {
-    
+
     const { pathname } = useLocation();
 
     useEffect(() => {
-        window.scrollTo(0, 0); // Scroll to the top of the page
-    }, [pathname]); // Run this effect when the pathname changes
+        window.scrollTo(0, 0); 
+    }, [pathname]); 
 
     const getdata = JSON.parse(localStorage.getItem("foodindex"));
 
     const products = categoryApi[2].subPages[0].product;
 
     const data = products.filter(
-        (item, i) => i === getdata  
+        (item) => item.objectId === getdata  
     );
-
     const navigate = useNavigate()
 
     const handelGoBack = () => {
@@ -29,6 +30,31 @@ export default function FoodDetail() {
             setTimeout(() => {
                 window.scrollTo(0, parseInt(scrollPosition, 10));
             }, 0); // Restore scroll position after navigation
+        }
+    }
+
+    const toastdesign = {
+        style: {
+          border: '1px solid #b99d75',
+          padding: '16px',
+          color: '#b99d75',
+        },
+        iconTheme: {
+          primary: '#b99d75',
+          secondary: '#FFFAEE',
+        },
+      }
+
+    const handelAddToCart = (id) => {
+        const cartData = JSON.parse(localStorage.getItem("CartData")) || [];
+
+        if (cartData.find((el) => el === id)) {
+            toast.error("Item already in cart",toastdesign);
+            
+        } else {
+            cartData.push(id);
+            localStorage.setItem("CartData", JSON.stringify(cartData));
+            toast.success("Success Fully Add",toastdesign)
         }
     }
 
@@ -55,13 +81,15 @@ export default function FoodDetail() {
                                     <p>{item.details[1].country}</p>
                                 </div>
                                 <div className="food-detail-btn">
-                                    <button>{item.btn}</button>
+                                    <button onClick={()=>handelAddToCart(item.objectId)}>{item.btn}</button>
                                 </div>
                             </div>
                         </>
                     ))}
                 </div>
+                
             </div>
+            <CardIcon/>
         </div>
     );
 }

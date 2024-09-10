@@ -1,3 +1,5 @@
+// import { v4 as uuidv4 } from 'uuid';
+
 import { FaCaretDown } from "react-icons/fa6";
 import { FaAngleDown } from "react-icons/fa6";
 
@@ -64,118 +66,95 @@ const categoryApi = [
                 path: "/food",
                 product: [
                     {
+                        objectId: "23d-3e35-2w9f-4fr5-001",
                         Foodname: "Classic Pizza",
                         img: Classicpizza,
-                        price: "$200",
+                        price: "$12",
                         details: [
-                            {
-                                type: "Snacks, Beverages, Desserts",
-                            },
-                            {
-                                country: "Chhindwara City",
-                            },
+                            { type: "Main Course, Italian" },
+                            { country: "Italy" },
                         ],
                         btn: "Add To Cart",
                     },
                     {
+                        objectId: "23d-3e35-2w9f-4fr5-002",
                         Foodname: "Burger",
                         img: Burger,
-                        price: "$200",
+                        price: "$8",
                         details: [
-                            {
-                                type: "Snacks, Beverages, Desserts",
-                            },
-                            {
-                                country: "Chhindwara City",
-                            },
+                            { type: "Fast Food, Snacks" },
+                            { country: "USA" },
                         ],
                         btn: "Add To Cart",
                     },
                     {
+                        objectId: "23d-3e35-2w9f-4fr5-003",
                         Foodname: "Dhosapizza",
                         img: Dhosapizza,
-                        price: "$200",
+                        price: "$10",
                         details: [
-                            {
-                                type: "Snacks, Beverages, Desserts",
-                            },
-                            {
-                                country: "Chhindwara City",
-                            },
+                            { type: "Snacks, Fusion" },
+                            { country: "India" },
                         ],
                         btn: "Add To Cart",
                     },
                     {
+                        objectId: "23d-3e35-2w9f-4fr5-004",
                         Foodname: "Franki",
                         img: Franki,
-                        price: "$200",
+                        price: "$5",
                         details: [
-                            {
-                                type: "Snacks, Beverages, Desserts",
-                            },
-                            {
-                                country: "Chhindwara City",
-                            },
+                            { type: "Snacks, Wrap" },
+                            { country: "India" },
                         ],
                         btn: "Add To Cart",
                     },
                     {
+                        objectId: "23d-3e35-2w9f-4fr5-005",
                         Foodname: "Momos",
                         img: Momos,
-                        price: "$200",
+                        price: "$4",
                         details: [
-                            {
-                                type: "Snacks, Beverages, Desserts",
-                            },
-                            {
-                                country: "Chhindwara City",
-                            },
+                            { type: "Snacks, Dumplings" },
+                            { country: "Nepal" },
                         ],
                         btn: "Add To Cart",
                     },
                     {
+                        objectId: "23d-3e35-2w9f-4fr5-006",
                         Foodname: "Biriyani",
                         img: Biriyani,
-                        price: "$200",
+                        price: "$15",
                         details: [
-                            {
-                                type: "Snacks, Beverages, Desserts",
-                            },
-                            {
-                                country: "Chhindwara City",
-                            },
+                            { type: "Main Course, Rice Dish" },
+                            { country: "India" },
                         ],
                         btn: "Add To Cart",
                     },
                     {
+                        objectId: "23d-3e35-2w9f-4fr5-007",
                         Foodname: "Chole",
                         img: chole,
-                        price: "$200",
+                        price: "$6",
                         details: [
-                            {
-                                type: "Snacks, Beverages, Desserts",
-                            },
-                            {
-                                country: "Chhindwara City",
-                            },
+                            { type: "Main Course, Vegetarian" },
+                            { country: "India" },
                         ],
                         btn: "Add To Cart",
                     },
                     {
+                        objectId: "23d-3e35-2w9f-4fr5-008",
                         Foodname: "Jalebi",
                         img: Jalebi,
-                        price: "$200",
+                        price: "$3",
                         details: [
-                            {
-                                type: "Snacks, Beverages, Desserts",
-                            },
-                            {
-                                country: "Chhindwara City",
-                            },
+                            { type: "Dessert, Sweet" },
+                            { country: "India" },
                         ],
                         btn: "Add To Cart",
-                    },
+                    },,
                     {
+                        objectId:"23d-3e35-2w9f-4fr5-009",
                         Foodname: "Masala Tea",
                         img: MasalaTea,
                         price: "$10",
@@ -190,6 +169,7 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     {
+                        objectId:"23d-3e35-2w9f-4fr5-010",
                         Foodname: "Açai Bowl",
                         img: AcaiBowl,
                         price: "$150",
@@ -204,6 +184,7 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     {
+                        objectId:"23d-3e35-2w9f-4fr5-011",
                         Foodname: "Arepas",
                         img: Arepas,
                         price: "$100",
@@ -219,6 +200,7 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     {
+                        objectId:"23d-3e35-2w9f-4fr5-012",
                         Foodname: "Idli",
                         img: Idli,
                         price: "$50",
@@ -233,6 +215,7 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     {
+                        objectId:"23d-3e35-2w9f-4fr5-013",
                         Foodname: "Kedgeree",
                         img: Kedgeree,
                         price: "$180",
@@ -248,6 +231,7 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     {
+                        objectId:"23d-3e35-2w9f-4fr5-014",
                         Foodname: "Khachapuri",
                         img: Khachapuri,
                         price: "$120",
@@ -262,7 +246,8 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     // {
-                    //     Foodname: "Kumpir",
+                        // objectId:"23d-3e35-2w9f-4fr5-015",
+                        //     Foodname: "Kumpir",
                     //     img: Kumpir,
                     //     price: "$90",
                     //     details: {

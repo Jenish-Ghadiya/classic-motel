@@ -7,11 +7,11 @@ export default function Foods() {
     const Food = categoryApi[2].subPages[0].product;
 
 
-    const dataIndex = (i) => {
-        localStorage.setItem("foodindex", i);
+    const dataIndex = (id) => {
+        localStorage.setItem("foodindex", JSON.stringify(id));
         sessionStorage.setItem("scrollPosition", window.pageYOffset); // Save current scroll position
     };
-
+    
     return (
         <div className="foods">
             <div className="container">
@@ -38,8 +38,8 @@ export default function Foods() {
                     {Food.map((item, i) => (
                         <Link
                             className="card"
-                            to="/fooddetail"
-                            onClick={() => dataIndex(i)}
+                            to={`/fooddetail?${item.objectId}`}
+                            onClick={() => dataIndex(item.objectId)}
                         >
                             <div className="card-img">
                                 <img src={item.img} />
