@@ -17,13 +17,13 @@ import Arepas from "../assets/images/food/BreakFast/Arepas colombia.jpg";
 import Idli from "../assets/images/food/BreakFast/Idali.jpg";
 import Kedgeree from "../assets/images/food/BreakFast/Kedgeree scotland.jpg";
 import Khachapuri from "../assets/images/food/BreakFast/Khachapuri (Georgia).webp";
-// import Kumpir from "../assets/images/food/BreakFast/turkey/kumpir.jpg";
-// import LoxAndBagels from "../assets/images/food/BreakFast/usa/lox-and-bagels.jpeg";
-// import Coffee from "../assets/images/food/BreakFast/coffee.avif";
-// import MasalaChaiCopy from "../assets/images/food/BreakFast/india/top-view-indian-masala-chai-copy.webp";
-// import Tosti from "../assets/images/food/BreakFast/netherlands/tosti.jpg";
-// import TurkishEggs from "../assets/images/food/BreakFast/turkey/turkish-eggs-with-butter.jpg";
-// import Zopf from "../assets/images/food/BreakFast/switzerland/zopf.jpeg";
+import Kumpir from "../assets/images/food/BreakFast/Kumpir tuerky.jpg";
+import LoxAndBagels from "../assets/images/food/BreakFast/Lox and Bagels (USA).jpeg";
+import Coffee from "../assets/images/food/BreakFast/cofee.avif";
+import MasalaChaiCopy from "../assets/images/food/BreakFast/masala-chai1.jpg";
+import Tosti from "../assets/images/food/BreakFast/Tosti (Netherlands).jpg";
+import TurkishEggs from "../assets/images/food/BreakFast/turkis egg with butter.jpg";
+import Zopf from "../assets/images/food/BreakFast/zopf switzarland.jpeg";
 
 // import AvocadoToast from "../assets/images/food/BreakFast/australia/avocado-toast.jpg";
 // import BagelsWithLox from "../assets/images/food/BreakFast/usa/bagels-with-lox.jpg";
@@ -152,9 +152,10 @@ const categoryApi = [
                             { country: "India" },
                         ],
                         btn: "Add To Cart",
-                    },,
+                    },
+                    ,
                     {
-                        objectId:"23d-3e35-2w9f-4fr5-009",
+                        objectId: "23d-3e35-2w9f-4fr5-009",
                         Foodname: "Masala Tea",
                         img: MasalaTea,
                         price: "$10",
@@ -169,7 +170,7 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     {
-                        objectId:"23d-3e35-2w9f-4fr5-010",
+                        objectId: "23d-3e35-2w9f-4fr5-010",
                         Foodname: "Açai Bowl",
                         img: AcaiBowl,
                         price: "$150",
@@ -184,7 +185,7 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     {
-                        objectId:"23d-3e35-2w9f-4fr5-011",
+                        objectId: "23d-3e35-2w9f-4fr5-011",
                         Foodname: "Arepas",
                         img: Arepas,
                         price: "$100",
@@ -196,11 +197,11 @@ const categoryApi = [
                                 country: "Colombia",
                             },
                         ],
-                        
+
                         btn: "Add To Cart",
                     },
                     {
-                        objectId:"23d-3e35-2w9f-4fr5-012",
+                        objectId: "23d-3e35-2w9f-4fr5-012",
                         Foodname: "Idli",
                         img: Idli,
                         price: "$50",
@@ -215,11 +216,11 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     {
-                        objectId:"23d-3e35-2w9f-4fr5-013",
+                        objectId: "23d-3e35-2w9f-4fr5-013",
                         Foodname: "Kedgeree",
                         img: Kedgeree,
                         price: "$180",
-                        
+
                         details: [
                             {
                                 type: "Main Course, Rice Dish",
@@ -231,7 +232,7 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     {
-                        objectId:"23d-3e35-2w9f-4fr5-014",
+                        objectId: "23d-3e35-2w9f-4fr5-014",
                         Foodname: "Khachapuri",
                         img: Khachapuri,
                         price: "$120",
@@ -245,77 +246,106 @@ const categoryApi = [
                         ],
                         btn: "Add To Cart",
                     },
-                    // {
-                        // objectId:"23d-3e35-2w9f-4fr5-015",
-                        //     Foodname: "Kumpir",
-                    //     img: Kumpir,
-                    //     price: "$90",
-                    //     details: {
-                    //         type: "Street Food",
-                    //         country: "Turkey",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Lox and Bagels",
-                    //     img: LoxAndBagels,
-                    //     price: "$220",
-                    //     details: {
-                    //         type: "Breakfast, Snacks",
-                    //         country: "USA",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Coffee",
-                    //     img: Coffee,
-                    //     price: "$15",
-                    //     details: {
-                    //         type: "Beverage",
-                    //         country: "Global",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Masala Chai Copy",
-                    //     img: MasalaChaiCopy,
-                    //     price: "$10",
-                    //     details: {
-                    //         type: "Beverage",
-                    //         country: "India",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Tosti",
-                    //     img: Tosti,
-                    //     price: "$60",
-                    //     details: {
-                    //         type: "Snack, Breakfast",
-                    //         country: "Netherlands",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Turkish Egg with Butter",
-                    //     img: TurkishEggs,
-                    //     price: "$80",
-                    //     details: {
-                    //         type: "Breakfast",
-                    //         country: "Turkey",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Zopf",
-                    //     img: Zopf,
-                    //     price: "$45",
-                    //     details: {
-                    //         type: "Bread",
-                    //         country: "Switzerland",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
+                    {
+                        objectId: "23d-3e35-2w9f-4fr5-015",
+                        Foodname: "Kumpir",
+                        img: Kumpir,
+                        price: "$90",
+                        details: [
+                            {
+                                type: "Street Food",
+                            },
+                            {
+                                country: "Turkey",
+                            },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        objectId: "23d-3e35-2w9f-4fr5-016",
+                        foodName: "Lox and Bagels",
+                        img: LoxAndBagels,
+                        price: "$220",
+                        details: [
+                            {
+                                type: "Breakfast, Snacks",
+                            },
+                            {
+                                country: "USA",
+                            },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        foodName: "Coffee",
+                        img: Coffee,
+                        price: "$15",
+                        details: [
+                            {
+                                type: "Beverage",
+                            },
+                            {
+                                country: "Global",
+                            },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        foodName: "Masala Chai Copy",
+                        img: MasalaChaiCopy,
+                        price: "$10",
+                        details: [
+                            {
+                                type: "Beverage",
+                            },
+                            {
+                                country: "India",
+                            },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        foodName: "Tosti",
+                        img: Tosti,
+                        price: "$60",
+                        details: [
+                            {
+                                type: "Snack, Breakfast",
+                            },
+                            {
+                                country: "Netherlands",
+                            },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        foodName: "Turkish Egg with Butter",
+                        img: TurkishEggs,
+                        price: "$80",
+                        details: [
+                            {
+                                type: "Breakfast",
+                            },
+                            {
+                                country: "Turkey",
+                            },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        foodName: "Zopf",
+                        img: Zopf,
+                        price: "$45",
+                        details: [
+                            {
+                                type: "Bread",
+                            },
+                            {
+                                country: "Switzerland",
+                            },
+                        ],
+                        btn: "Add To Cart",
+                    },
                     // {
                     //     foodName: "Avocado Toast",
                     //     img: AvocadoToast,
