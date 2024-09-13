@@ -12,7 +12,12 @@
     height: 550px;
     background-position: center;
     background-size: cover;
-    
+    @media (max-width: 901PX) {
+        height: 400px;
+    }
+    @media (max-width: 601PX) {
+        height: 300px;
+    }
     h1 {
         @include font60;
         color: var(--theme-white);

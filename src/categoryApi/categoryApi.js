@@ -25,22 +25,18 @@ import Tosti from "../assets/images/food/BreakFast/Tosti (Netherlands).jpg";
 import TurkishEggs from "../assets/images/food/BreakFast/turkis egg with butter.jpg";
 import Zopf from "../assets/images/food/BreakFast/zopf switzarland.jpeg";
 
-// import AvocadoToast from "../assets/images/food/BreakFast/australia/avocado-toast.jpg";
-// import BagelsWithLox from "../assets/images/food/BreakFast/usa/bagels-with-lox.jpg";
-// import BanhMi from "../assets/images/food/BreakFast/vietnam/banh-mi.jpeg";
-// import Golgappa from "../assets/images/food/BreakFast/india/golgappa.jpeg";
-// import Congee from "../assets/images/food/BreakFast/china/congee.webp";
-// import HotTea from "../assets/images/food/BreakFast/tea/cup-of-hot-tea.webp";
-// import DimSum from "../assets/images/food/BreakFast/china/dim-sum.jpeg";
-// import Chilaquiles from "../assets/images/food/BreakFast/france/chilaquiles.webp";
-// import FrenchToast from "../assets/images/food/BreakFast/french-toast.jpg";
-// import GreekYogurt from "../assets/images/food/BreakFast/greece/greek-yogurt-with-honey-and-nuts.jpg";
-// import Muesli from "../assets/images/food/BreakFast/muesli-recipe.jpg";
-// import PancakesMapleSyrup from "../assets/images/food/BreakFast/canada/pancakes-with-maple-syrup.jpeg";
-// import PancitCanton from "../assets/images/food/BreakFast/philippines/pancit-canton.jpg";
-// import Photo from "../assets/images/food/BreakFast/photo.jpeg";
-// import Shakshuka from "../assets/images/food/BreakFast/israel/shakshuka.jpg";
-// import Tamales from "../assets/images/food/BreakFast/mexico/tamales.avif";
+import AvocadoToast from "../assets/images/food/BreakFast/avocado tost aus.jpg";
+import BagelsWithLox from "../assets/images/food/BreakFast/Bagels with Lox US.jpg";
+import BanhMi from "../assets/images/food/BreakFast/Bánh Mì vietnam.jpeg";
+import Congee from "../assets/images/food/BreakFast/Congee china.webp";
+import DimSum from "../assets/images/food/BreakFast/Dim_Sum_Trang china.jpg";
+import FrenchToast from "../assets/images/food/BreakFast/French-Toast-1.jpg";
+import GreekYogurt from "../assets/images/food/BreakFast/Greek Yogurt with Honey and Nuts greece.jpg";
+import Muesli from "../assets/images/food/BreakFast/Muesli-Recipe-10.jpg";
+import PancakesMapleSyrup from "../assets/images/food/BreakFast/Pancakes with Maple Syrup canada.jpeg";
+import PancitCanton from "../assets/images/food/BreakFast/Pancit Canton (Philippines).jpg";
+import Shakshuka from "../assets/images/food/BreakFast/Shakshuka iserail.jpg";
+import Tamales from "../assets/images/food/BreakFast/Tamales mexico.avif";
 
 const categoryApi = [
     {
@@ -245,6 +241,7 @@ const categoryApi = [
                             },
                         ],
                         btn: "Add To Cart",
+                        
                     },
                     {
                         objectId: "23d-3e35-2w9f-4fr5-015",
@@ -263,7 +260,7 @@ const categoryApi = [
                     },
                     {
                         objectId: "23d-3e35-2w9f-4fr5-016",
-                        foodName: "Lox and Bagels",
+                        Foodname: "Lox and Bagels",
                         img: LoxAndBagels,
                         price: "$220",
                         details: [
@@ -277,7 +274,9 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     {
-                        foodName: "Coffee",
+                        
+                        objectId: "23d-3e35-2w9f-4fr5-017",
+                        Foodname: "Coffee",
                         img: Coffee,
                         price: "$15",
                         details: [
@@ -291,7 +290,8 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     {
-                        foodName: "Masala Chai Copy",
+                        objectId: "23d-3e35-2w9f-4fr5-018",
+                        Foodname: "Masala Chai Copy",
                         img: MasalaChaiCopy,
                         price: "$10",
                         details: [
@@ -305,7 +305,8 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     {
-                        foodName: "Tosti",
+                        objectId: "23d-3e35-2w9f-4fr5-019",
+                        Foodname: "Tosti",
                         img: Tosti,
                         price: "$60",
                         details: [
@@ -319,7 +320,8 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     {
-                        foodName: "Turkish Egg with Butter",
+                        objectId: "23d-3e35-2w9f-4fr5-020",
+                        Foodname: "Turkish Egg with Butter",
                         img: TurkishEggs,
                         price: "$80",
                         details: [
@@ -333,7 +335,8 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     {
-                        foodName: "Zopf",
+                        objectId: "23d-3e35-2w9f-4fr5-021",
+                        Foodname: "Zopf",
                         img: Zopf,
                         price: "$45",
                         details: [
@@ -346,156 +349,138 @@ const categoryApi = [
                         ],
                         btn: "Add To Cart",
                     },
-                    // {
-                    //     foodName: "Avocado Toast",
-                    //     img: AvocadoToast,
-                    //     price: "$120",
-                    //     details: {
-                    //         type: "Healthy, Breakfast",
-                    //         country: "Australia",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Bagels with Lox",
-                    //     img: BagelsWithLox,
-                    //     price: "$220",
-                    //     details: {
-                    //         type: "Breakfast, Snacks",
-                    //         country: "USA",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Bánh Mì",
-                    //     img: BanhMi,
-                    //     price: "$90",
-                    //     details: {
-                    //         type: "Street Food, Sandwich",
-                    //         country: "Vietnam",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Golgappa",
-                    //     img: Golgappa,
-                    //     price: "$40",
-                    //     details: {
-                    //         type: "Snacks, Street Food",
-                    //         country: "India",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Congee",
-                    //     img: Congee,
-                    //     price: "$70",
-                    //     details: {
-                    //         type: "Breakfast, Porridge",
-                    //         country: "China",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Dim Sum",
-                    //     img: DimSum,
-                    //     price: "$110",
-                    //     details: {
-                    //         type: "Snacks, Dumplings",
-                    //         country: "China",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Chilaquiles",
-                    //     img: Chilaquiles,
-                    //     price: "$100",
-                    //     details: {
-                    //         type: "Breakfast, Main Course",
-                    //         country: "Mexico",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "French Toast",
-                    //     img: FrenchToast,
-                    //     price: "$80",
-                    //     details: {
-                    //         type: "Breakfast, Snack",
-                    //         country: "France",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Greek Yogurt with Honey and Nuts",
-                    //     img: GreekYogurt,
-                    //     price: "$85",
-                    //     details: {
-                    //         type: "Dessert, Healthy",
-                    //         country: "Greece",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Muesli",
-                    //     img: Muesli,
-                    //     price: "$50",
-                    //     details: {
-                    //         type: "Breakfast, Healthy",
-                    //         country: "Switzerland",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Pancakes with Maple Syrup",
-                    //     img: PancakesMapleSyrup,
-                    //     price: "$95",
-                    //     details: {
-                    //         type: "Breakfast, Dessert",
-                    //         country: "Canada",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Pancit Canton",
-                    //     img: PancitCanton,
-                    //     price: "$85",
-                    //     details: {
-                    //         type: "Main Course, Noodles",
-                    //         country: "Philippines",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Photo",
-                    //     img: Photo,
-                    //     price: "$65",
-                    //     details: {
-                    //         type: "Dessert, Drink",
-                    //         country: "Unknown",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Shakshuka",
-                    //     img: Shakshuka,
-                    //     price: "$100",
-                    //     details: {
-                    //         type: "Main Course, Breakfast",
-                    //         country: "Israel",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // },
-                    // {
-                    //     foodName: "Tamales",
-                    //     img: Tamales,
-                    //     price: "$90",
-                    //     details: {
-                    //         type: "Snacks, Main Course",
-                    //         country: "Mexico",
-                    //     },
-                    //     btn: "Add To Cart",
-                    // }
+                    {
+                        objectId: "23d-3e35-2w9f-4fr5-022",
+                        Foodname: "Avocado Toast",
+                        img: AvocadoToast,
+                        price: "$120",
+                        details: [
+                            { type: "Healthy, Breakfast" },
+                            { country: "Australia" },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        objectId: "23d-3e35-2w9f-4fr5-023",
+                        Foodname: "Bagels with Lox",
+                        img: BagelsWithLox,
+                        price: "$220",
+                        details: [
+                            { type: "Breakfast, Snacks" },
+                            { country: "USA" },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        objectId: "23d-3e35-2w9f-4fr5-024",
+                        Foodname: "Bánh Mì",
+                        img: BanhMi,
+                        price: "$90",
+                        details: [
+                            { type: "Street Food, Sandwich" },
+                            { country: "Vietnam" },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        objectId: "23d-3e35-2w9f-4fr5-025",
+                        Foodname: "Congee",
+                        img: Congee,
+                        price: "$70",
+                        details: [
+                            { type: "Breakfast, Porridge" },
+                            { country: "China" },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        objectId: "23d-3e35-2w9f-4fr5-026",
+                        Foodname: "Dim Sum",
+                        img: DimSum,
+                        price: "$110",
+                        details: [
+                            { type: "Snacks, Dumplings" },
+                            { country: "China" },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        objectId: "23d-3e35-2w9f-4fr5-027",
+                        Foodname: "French Toast",
+                        img: FrenchToast,
+                        price: "$80",
+                        details: [
+                            { type: "Breakfast, Snack" },
+                            { country: "France" },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        objectId: "23d-3e35-2w9f-4fr5-028",
+                        Foodname: "Greek Yogurt with Honey and Nuts",
+                        img: GreekYogurt,
+                        price: "$85",
+                        details: [
+                            { type: "Dessert, Healthy" },
+                            { country: "Greece" },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        objectId: "23d-3e35-2w9f-4fr5-029",
+                        Foodname: "Muesli",
+                        img: Muesli,
+                        price: "$50",
+                        details: [
+                            { type: "Breakfast, Healthy" },
+                            { country: "Switzerland" },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        objectId: "23d-3e35-2w9f-4fr5-030",
+                        Foodname: "Pancakes with Maple Syrup",
+                        img: PancakesMapleSyrup,
+                        price: "$95",
+                        details: [
+                            { type: "Breakfast, Dessert" },
+                            { country: "Canada" },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        objectId: "23d-3e35-2w9f-4fr5-031",
+                        Foodname: "Pancit Canton",
+                        img: PancitCanton,
+                        price: "$85",
+                        details: [
+                            { type: "Main Course, Noodles" },
+                            { country: "Philippines" },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        objectId: "23d-3e35-2w9f-4fr5-032",
+                        Foodname: "Shakshuka",
+                        img: Shakshuka,
+                        price: "$100",
+                        details: [
+                            { type: "Main Course, Breakfast" },
+                            { country: "Israel" },
+                        ],
+                        btn: "Add To Cart",
+                    },
+                    {
+                        objectId: "23d-3e35-2w9f-4fr5-033",
+                        Foodname: "Tamales",
+                        img: Tamales,
+                        price: "$90",
+                        details: [
+                            { type: "Snacks, Main Course" },
+                            { country: "Mexico" },
+                        ],
+                        btn: "Add To Cart",
+                    },
                 ],
             },
         ],

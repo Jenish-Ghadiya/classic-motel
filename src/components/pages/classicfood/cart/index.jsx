@@ -1,15 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./cart.scss";
 import categoryApi from "../../../../categoryApi/categoryApi";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+
 export default function Cart() {
-    const cartData = JSON.parse(localStorage.getItem("CartData")) || [];
+    const [cartData, setCartData] = useState(
+        JSON.parse(localStorage.getItem("CartData")) || []
+    );
     const products = categoryApi[2].subPages[0].product;
 
-    const data = products.filter((item) =>cartData.includes(item.objectId));
-    
+    const data = products.filter((item) => cartData.includes(item.objectId));
+
     const navigate = useNavigate();
+
     const handelGoBack = () => {
         const scrollPosition = sessionStorage.getItem("scrollPosition");
         navigate(-1);
@@ -21,14 +25,12 @@ export default function Cart() {
     };
 
     const handleRemove = (id) => {
-        // const cartData = JSON.parse(localStorage.getItem("CartData")) || [];
-
-        cartData.splice(id, 1);
-        const newCartData = cartData;
-        localStorage.setItem("CartData", JSON.stringify(newCartData));
-        window.location.reload();
+        const updatedCartData = cartData.filter((item) => item !== id);
+        setCartData(updatedCartData); // Update state
+        localStorage.setItem("CartData", JSON.stringify(updatedCartData)); // Update localStorage
     };
 
+    
     return (
         <div className="cart">
             <div className="container">
@@ -51,16 +53,19 @@ export default function Cart() {
                             <h1>Foods Cart</h1>
                         </div>
                         <div className="cart-detail-grid">
-                            {data.map((item, i) => (
+                            {data.map((item) => (
+                                // <div key={item.objectId} className="cart-item">
                                 <>
                                     <div className="cart-detail-img">
-                                        <img src={item.img} alt="" />
+                                        <img
+                                            src={item.img}
+                                            alt={item.Foodname}
+                                        />
                                     </div>
                                     <div className="cart-detail-info">
                                         <h5>{item.Foodname}</h5>
                                         <p className="price">
-                                            <span>Price:</span>
-                                            {item.price}
+                                            <span>Price:</span> {item.price}
                                         </p>
                                         <div className="cart-detail-other-info">
                                             <p>{item.details[0].type}</p>
@@ -69,13 +74,16 @@ export default function Cart() {
                                         <div className="cart-detail-btn">
                                             <button>Order Now</button>
                                             <button
-                                                onClick={() => handleRemove(i)}
+                                                onClick={() =>
+                                                    handleRemove(item.objectId)
+                                                }
                                             >
                                                 Remove
                                             </button>
                                         </div>
                                     </div>
-                                </>
+                                </>   
+                                //  </div>
                             ))}
                         </div>
                     </>
