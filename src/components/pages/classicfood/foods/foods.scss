@@ -41,7 +41,7 @@
                 }
                 @media (max-width: 501px) {
                     padding: 10px 20px;
-                    font-size: 10px;
+                    font-size: 14px;
                 }
             }
         }
@@ -71,7 +71,7 @@
                     }
                     @media (max-width: 501px) {
                         padding: 10px 20px;
-                        font-size: 10px;
+                        font-size: 14px;
                     }
                 }
             }
@@ -98,7 +98,6 @@
             grid-template-columns: repeat(2, 1fr);
             height: auto;
         }
-        
         .card {
             border-radius: 10px;
             overflow: hidden;
