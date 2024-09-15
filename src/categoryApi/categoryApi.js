@@ -24,19 +24,17 @@ import MasalaChaiCopy from "../assets/images/food/BreakFast/masala-chai1.jpg";
 import Tosti from "../assets/images/food/BreakFast/Tosti (Netherlands).jpg";
 import TurkishEggs from "../assets/images/food/BreakFast/turkis egg with butter.jpg";
 import Zopf from "../assets/images/food/BreakFast/zopf switzarland.jpeg";
-
 import AvocadoToast from "../assets/images/food/BreakFast/avocado tost aus.jpg";
 import BagelsWithLox from "../assets/images/food/BreakFast/Bagels with Lox US.jpg";
-import BanhMi from "../assets/images/food/BreakFast/Bánh Mì vietnam.jpeg";
-import Congee from "../assets/images/food/BreakFast/Congee china.webp";
-import DimSum from "../assets/images/food/BreakFast/Dim_Sum_Trang china.jpg";
-import FrenchToast from "../assets/images/food/BreakFast/French-Toast-1.jpg";
-import GreekYogurt from "../assets/images/food/BreakFast/Greek Yogurt with Honey and Nuts greece.jpg";
-import Muesli from "../assets/images/food/BreakFast/Muesli-Recipe-10.jpg";
-import PancakesMapleSyrup from "../assets/images/food/BreakFast/Pancakes with Maple Syrup canada.jpeg";
-import PancitCanton from "../assets/images/food/BreakFast/Pancit Canton (Philippines).jpg";
-import Shakshuka from "../assets/images/food/BreakFast/Shakshuka iserail.jpg";
-import Tamales from "../assets/images/food/BreakFast/Tamales mexico.avif";
+import CinnamonToast from "../assets/images/Lunch/Honeytoast.avif"
+import Salad from "../assets/images/Lunch/Salad.avif"
+import Fries from "../assets/images/Dinner/Frieswithsouse.avif"
+import Salmon from "../assets/images/Dinner/salmon and zucchini.jpg"
+
+
+import Blogspa from "../assets/images/blog/Spa.jpg";
+import Dining from "../assets/images/blog/dinig.jpg";
+import Room from "../assets/images/blog/Rooms.jpg";
 
 const categoryApi = [
     {
@@ -58,6 +56,10 @@ const categoryApi = [
         path: "/pages",
         subPages: [
             {
+                id: 1,
+                date: "MAY 16",
+                category: "NEWS · DINING",
+                image: Dining,
                 name: "Classic Food",
                 path: "/food",
                 product: [
@@ -67,7 +69,7 @@ const categoryApi = [
                         img: Classicpizza,
                         price: "$12",
                         details: [
-                            { type: "Main Course, Italian" },
+                            { type: "Lunch, Dinner, Italian" },
                             { country: "Italy" },
                         ],
                         btn: "Add To Cart",
@@ -78,7 +80,7 @@ const categoryApi = [
                         img: Burger,
                         price: "$8",
                         details: [
-                            { type: "Fast Food, Snacks" },
+                            { type: "Lunch, Snacks" },
                             { country: "USA" },
                         ],
                         btn: "Add To Cart",
@@ -89,7 +91,7 @@ const categoryApi = [
                         img: Dhosapizza,
                         price: "$10",
                         details: [
-                            { type: "Snacks, Fusion" },
+                            { type: "Snacks,Dinner" },
                             { country: "India" },
                         ],
                         btn: "Add To Cart",
@@ -100,7 +102,7 @@ const categoryApi = [
                         img: Franki,
                         price: "$5",
                         details: [
-                            { type: "Snacks, Wrap" },
+                            { type: "Snacks, Lunch" },
                             { country: "India" },
                         ],
                         btn: "Add To Cart",
@@ -111,7 +113,7 @@ const categoryApi = [
                         img: Momos,
                         price: "$4",
                         details: [
-                            { type: "Snacks, Dumplings" },
+                            { type: "Snacks, Lunch" },
                             { country: "Nepal" },
                         ],
                         btn: "Add To Cart",
@@ -122,7 +124,7 @@ const categoryApi = [
                         img: Biriyani,
                         price: "$15",
                         details: [
-                            { type: "Main Course, Rice Dish" },
+                            { type: "Main Course, Dinner" },
                             { country: "India" },
                         ],
                         btn: "Add To Cart",
@@ -133,7 +135,7 @@ const categoryApi = [
                         img: chole,
                         price: "$6",
                         details: [
-                            { type: "Main Course, Vegetarian" },
+                            { type: "Lunch, Vegetarian" },
                             { country: "India" },
                         ],
                         btn: "Add To Cart",
@@ -144,7 +146,7 @@ const categoryApi = [
                         img: Jalebi,
                         price: "$3",
                         details: [
-                            { type: "Dessert, Sweet" },
+                            { type: "Dessert, Sweet, Breakfast" },
                             { country: "India" },
                         ],
                         btn: "Add To Cart",
@@ -157,7 +159,7 @@ const categoryApi = [
                         price: "$10",
                         details: [
                             {
-                                type: "Beverage",
+                                type: "Breakfast, Snacks, Healthy",
                             },
                             {
                                 country: "India",
@@ -187,7 +189,7 @@ const categoryApi = [
                         price: "$100",
                         details: [
                             {
-                                type: "Snacks, Main Course",
+                                type: "Dinner, Main Course",
                             },
                             {
                                 country: "Colombia",
@@ -219,7 +221,7 @@ const categoryApi = [
 
                         details: [
                             {
-                                type: "Main Course, Rice Dish",
+                                type: "Dinner, Rice Dish",
                             },
                             {
                                 country: "Scotland",
@@ -234,14 +236,13 @@ const categoryApi = [
                         price: "$120",
                         details: [
                             {
-                                type: "Main Course, Snacks",
+                                type: "Dinner, Snacks",
                             },
                             {
                                 country: "Georgia",
                             },
                         ],
                         btn: "Add To Cart",
-                        
                     },
                     {
                         objectId: "23d-3e35-2w9f-4fr5-015",
@@ -250,7 +251,7 @@ const categoryApi = [
                         price: "$90",
                         details: [
                             {
-                                type: "Street Food",
+                                type: "Lunch, Vegetarian",
                             },
                             {
                                 country: "Turkey",
@@ -274,14 +275,13 @@ const categoryApi = [
                         btn: "Add To Cart",
                     },
                     {
-                        
                         objectId: "23d-3e35-2w9f-4fr5-017",
                         Foodname: "Coffee",
                         img: Coffee,
                         price: "$15",
                         details: [
                             {
-                                type: "Beverage",
+                                type: "Breakfast, Beverage",
                             },
                             {
                                 country: "Global",
@@ -291,15 +291,15 @@ const categoryApi = [
                     },
                     {
                         objectId: "23d-3e35-2w9f-4fr5-018",
-                        Foodname: "Masala Chai Copy",
-                        img: MasalaChaiCopy,
+                        Foodname: "Salad",
+                        img: Salad,
                         price: "$10",
                         details: [
                             {
-                                type: "Beverage",
+                                type: "Lunch",
                             },
                             {
-                                country: "India",
+                                country: "Australia",
                             },
                         ],
                         btn: "Add To Cart",
@@ -341,7 +341,7 @@ const categoryApi = [
                         price: "$45",
                         details: [
                             {
-                                type: "Bread",
+                                type: "Breakfast, Bread",
                             },
                             {
                                 country: "Switzerland",
@@ -373,122 +373,91 @@ const categoryApi = [
                     },
                     {
                         objectId: "23d-3e35-2w9f-4fr5-024",
-                        Foodname: "Bánh Mì",
-                        img: BanhMi,
-                        price: "$90",
+                        Foodname: "Cinnamon Toast",
+                        img: CinnamonToast,
+                        price: "$120",
                         details: [
-                            { type: "Street Food, Sandwich" },
-                            { country: "Vietnam" },
+                            { type: "Lunch" },
+                            { country: "Australia" },
                         ],
                         btn: "Add To Cart",
                     },
                     {
                         objectId: "23d-3e35-2w9f-4fr5-025",
-                        Foodname: "Congee",
-                        img: Congee,
-                        price: "$70",
+                        Foodname: "French Fries",
+                        img: Fries,
+                        price: "$10",
                         details: [
-                            { type: "Breakfast, Porridge" },
-                            { country: "China" },
+                            { type: "Dinner" },
+                            { country: "USA" },
                         ],
                         btn: "Add To Cart",
                     },
                     {
                         objectId: "23d-3e35-2w9f-4fr5-026",
-                        Foodname: "Dim Sum",
-                        img: DimSum,
-                        price: "$110",
+                        Foodname: "Salmon",
+                        img: Salmon,
+                        price: "$30",
                         details: [
-                            { type: "Snacks, Dumplings" },
-                            { country: "China" },
+                            { type: "Dinner" },
+                            { country: "USA" },
                         ],
                         btn: "Add To Cart",
-                    },
-                    {
-                        objectId: "23d-3e35-2w9f-4fr5-027",
-                        Foodname: "French Toast",
-                        img: FrenchToast,
-                        price: "$80",
-                        details: [
-                            { type: "Breakfast, Snack" },
-                            { country: "France" },
-                        ],
-                        btn: "Add To Cart",
-                    },
-                    {
-                        objectId: "23d-3e35-2w9f-4fr5-028",
-                        Foodname: "Greek Yogurt with Honey and Nuts",
-                        img: GreekYogurt,
-                        price: "$85",
-                        details: [
-                            { type: "Dessert, Healthy" },
-                            { country: "Greece" },
-                        ],
-                        btn: "Add To Cart",
-                    },
-                    {
-                        objectId: "23d-3e35-2w9f-4fr5-029",
-                        Foodname: "Muesli",
-                        img: Muesli,
-                        price: "$50",
-                        details: [
-                            { type: "Breakfast, Healthy" },
-                            { country: "Switzerland" },
-                        ],
-                        btn: "Add To Cart",
-                    },
-                    {
-                        objectId: "23d-3e35-2w9f-4fr5-030",
-                        Foodname: "Pancakes with Maple Syrup",
-                        img: PancakesMapleSyrup,
-                        price: "$95",
-                        details: [
-                            { type: "Breakfast, Dessert" },
-                            { country: "Canada" },
-                        ],
-                        btn: "Add To Cart",
-                    },
-                    {
-                        objectId: "23d-3e35-2w9f-4fr5-031",
-                        Foodname: "Pancit Canton",
-                        img: PancitCanton,
-                        price: "$85",
-                        details: [
-                            { type: "Main Course, Noodles" },
-                            { country: "Philippines" },
-                        ],
-                        btn: "Add To Cart",
-                    },
-                    {
-                        objectId: "23d-3e35-2w9f-4fr5-032",
-                        Foodname: "Shakshuka",
-                        img: Shakshuka,
-                        price: "$100",
-                        details: [
-                            { type: "Main Course, Breakfast" },
-                            { country: "Israel" },
-                        ],
-                        btn: "Add To Cart",
-                    },
-                    {
-                        objectId: "23d-3e35-2w9f-4fr5-033",
-                        Foodname: "Tamales",
-                        img: Tamales,
-                        price: "$90",
-                        details: [
-                            { type: "Snacks, Main Course" },
-                            { country: "Mexico" },
-                        ],
-                        btn: "Add To Cart",
-                    },
+                    }
+                    
                 ],
             },
+            {
+                id: 2,
+                date: "MAY 16",
+                category: "NEWS · SPA",
+                image: Blogspa,
+                name: "Spa And Wellness",
+                path: "/food",
+            },
+            {
+                id: 3,
+                date: "MAY 16",
+                category: "NEWS · WELLNESS",
+                image: Room,
+                name: "Gym & Wellness",
+                path: "/food",
+            }
+
         ],
     },
     {
         category: "BLOG",
         path: "/blog",
-        product: [],
+        blogPosts: [
+            {
+                id: 1,
+                img: Blogspa,
+                title: "Relaxing Spa Treatments",
+                date: "August 20, 2024",
+                excerpt:
+                    "Discover the best spa treatments to rejuvenate your body and mind at Classic Motel.",
+                link: "/blog",
+            },
+            {
+                id: 2,
+                img: Dining,
+                title: "Gourmet Dining Experience",
+                date: "July 15, 2024",
+                excerpt:
+                    "Explore our gourmet dining options, perfect for every palate.",
+                link: "/food",
+            },
+            {
+                id: 3,
+                img: Room,
+                title: "Luxury Room Bookings",
+                date: "June 30, 2024",
+                excerpt:
+                    "Book your stay at Classic Motel and enjoy luxurious accommodations.",
+                link: "/blog",
+            },
+        ],
     },
 ];
 export default categoryApi;

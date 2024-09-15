@@ -173,9 +173,6 @@ function Header() {
                                 )}
                             </div>
                         ))}
-                        <span className="header-tel">
-                            Tel : +1 9898 77 8888
-                        </span>
                         <div className="header-enqury-btn">
                             <Link to="/login">
                                 <button>Enquire Now</button>

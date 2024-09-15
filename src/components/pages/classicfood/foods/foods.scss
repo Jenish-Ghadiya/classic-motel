@@ -112,6 +112,7 @@
                     width: 100%;
                     display: block;
                     height: 180px;
+                    object-fit: cover;
                     @media (max-width: 768px) {
                         height: 140px;
                     }

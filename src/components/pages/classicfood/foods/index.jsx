@@ -10,16 +10,29 @@ export default function Foods() {
     const [itemsPerPage, setItemsPerPage] = useState(defaultItemsPerPage);
     const [currentPage, setCurrentPage] = useState(0);
     const [searchQuery, setSearchQuery] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState("All"); // New state for category filter
+
     const Food = categoryApi[2].subPages[0].product;
 
-    // Filter food items based on search query
-    const filteredFood = Food.filter(item =>
-        item.Foodname.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    // Filter food items based on search query and selected category
+    const filteredFood = Food.filter((item) => {
+        const matchesSearch = item.Foodname.toLowerCase().includes(
+            searchQuery.toLowerCase()
+        );
+        const matchesCategory =
+            selectedCategory === "All" ||
+            item.details[0].type
+                .toLowerCase()
+                .includes(selectedCategory.toLowerCase());
+        return matchesSearch && matchesCategory;
+    });
 
     // Calculate paginated data
     const startIndex = currentPage * itemsPerPage;
-    const currentData = filteredFood.slice(startIndex, startIndex + itemsPerPage);
+    const currentData = filteredFood.slice(
+        startIndex,
+        startIndex + itemsPerPage
+    );
 
     const totalPages = Math.ceil(filteredFood.length / itemsPerPage);
 
@@ -32,6 +45,11 @@ export default function Foods() {
         setCurrentPage(0); // Reset to the first page on new search
     };
 
+    const handleCategoryChange = (category) => {
+        setSelectedCategory(category);
+        setCurrentPage(0); // Reset to the first page when category changes
+    };
+
     const dataIndex = (id) => {
         localStorage.setItem("foodindex", JSON.stringify(id));
         sessionStorage.setItem("scrollPosition", window.pageYOffset); // Save current scroll position
@@ -40,14 +58,13 @@ export default function Foods() {
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth <= 501) {
-                setItemsPerPage(8);  
-            }else if (window.innerWidth <= 701) {
+                setItemsPerPage(8);
+            } else if (window.innerWidth <= 701) {
                 setItemsPerPage(9);
-            } 
-            else if (window.innerWidth <= 901) {
-                setItemsPerPage(8);  
+            } else if (window.innerWidth <= 901) {
+                setItemsPerPage(8);
             } else {
-                setItemsPerPage(defaultItemsPerPage);  
+                setItemsPerPage(defaultItemsPerPage);
             }
         };
 
@@ -72,16 +89,32 @@ export default function Foods() {
                     </div>
                     <div className="foodsearch-item-btns">
                         <div className="foodsearch-item-btn">
-                            <button>All</button>
+                            <button onClick={() => handleCategoryChange("All")}>
+                                All
+                            </button>
                         </div>
                         <div className="foodsearch-item-btn">
-                            <button>Breakfast</button>
+                            <button
+                                onClick={() =>
+                                    handleCategoryChange("Breakfast")
+                                }
+                            >
+                                Breakfast
+                            </button>
                         </div>
                         <div className="foodsearch-item-btn">
-                            <button>Lunch</button>
+                            <button
+                                onClick={() => handleCategoryChange("Lunch")}
+                            >
+                                Lunch
+                            </button>
                         </div>
                         <div className="foodsearch-item-btn">
-                            <button>Dinner</button>
+                            <button
+                                onClick={() => handleCategoryChange("Dinner")}
+                            >
+                                Dinner
+                            </button>
                         </div>
                     </div>
                 </div>
