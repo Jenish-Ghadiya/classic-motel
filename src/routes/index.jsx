@@ -7,6 +7,7 @@ import Error from "../common/error";
 import Category from "./category";
 import FoodDetail from "../components/pages/classicfood/fooddetail";
 import Cart from "../components/pages/classicfood/cart";
+import Spa from "../components/pages/pages";
 const router = createBrowserRouter([
     {
         path: "/signup",
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path:"/cart",
                 element:<Cart/>
+            },
+            {
+                path:"/spa",
+                element:<Spa/>
             }
         ],
     },

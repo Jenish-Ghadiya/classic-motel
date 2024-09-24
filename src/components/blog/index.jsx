@@ -3,6 +3,7 @@ import "./blog.scss";
 import { Link } from "react-router-dom";
 import BlogHeroBanner from "./blogherobanner";
 import categoryApi from "../../categoryApi/categoryApi";
+import BlogDetails from "./blogdetails";
 
 function Blog() {
     const blogPosts = categoryApi[3].blogPosts;
@@ -26,6 +27,7 @@ function Blog() {
                     ))}
                 </div>
             </div>
+            <BlogDetails/>
         </>
     );
 }

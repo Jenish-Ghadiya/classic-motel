@@ -1,0 +1,91 @@
+@import "../../../styles/index.scss";
+
+.blog-details {
+    margin: 50px 0 100px 0;
+    .newsletter-section {
+        text-align: left;
+        margin-bottom: 40px;
+
+        h4 {
+            @include font16;
+            color: var(--theme-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            @include font55;
+            color: var(--theme-textblack);
+            margin: 20px 0;
+            font-weight: 100;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+
+            input[type="email"] {
+                border: none;
+                border-bottom: 1px solid var(--theme-gray);
+                padding: 10px 0;
+                font-size: 18px;
+                margin-bottom: 20px;
+                outline: none;
+                color: var(--theme-textblack);
+
+                &::placeholder {
+                    color: var(--theme-gray);
+                }
+            }
+
+            .policy-agreement {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+
+                input {
+                    margin-right: 10px;
+                }
+
+                label {
+                    @include font16;
+                    color: var(--theme-textblack);
+                }
+            }
+        }
+    }
+
+    .images-section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    .subscribe-button {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: var(--theme-gray);
+        color: var(--theme-white);
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 1px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: var(--theme-hover-color);
+        }
+
+        .subscribe-icon {
+            margin-left: 10px;
+        }
+    }
+}

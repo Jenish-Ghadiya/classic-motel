@@ -18,7 +18,7 @@ export default function FoodDetail() {
     const products = categoryApi[2].subPages[0].product;
 
     const data = products.filter((item) => item.objectId === getdata);
-    const navigate = useNavigate();
+    const navigate = useNavigate(); 
 
     const handelGoBack = () => {
         const scrollPosition = sessionStorage.getItem("scrollPosition");
@@ -75,8 +75,15 @@ export default function FoodDetail() {
                                     {item.price}
                                 </p>
                                 <div className="food-detail-other-info">
-                                    <p>{item.details[0].type}</p>
-                                    <p>{item.details[1].country}</p>
+                                    <ul>
+                                        <li><span>Type : </span> {item.details[0].type}</li>
+                                        <li><span>Origin : </span>{item.details[1].country}</li>
+                                    </ul>
+                                </div>
+                                <div className="food-detail-description">
+                                    <ul>
+                                        <li> <span>Description : </span><p>{item.description}</p></li>
+                                    </ul>
                                 </div>
                                 <div className="food-detail-btn">
                                     <button
