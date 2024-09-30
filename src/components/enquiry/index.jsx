@@ -39,7 +39,6 @@ export default function Enquiry() {
                             Surat, Gujarat
                         </Popup>
                     </Marker>
-                    {/* Remove the location-buttons div */}
                 </MapContainer>
             </div>
             <div className="enquiry">

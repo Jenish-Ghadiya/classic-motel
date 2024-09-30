@@ -34,6 +34,7 @@ import Salmon from "../assets/images/Dinner/salmon and zucchini.jpg"
 import Blogspa from "../assets/images/blog/Spa.jpg";
 import Dining from "../assets/images/blog/dinig.jpg";
 import Room from "../assets/images/blog/Rooms.jpg";
+import Gym from "../assets/images/Gym.jpg";
 
 const categoryApi = [
     {
@@ -331,7 +332,7 @@ const categoryApi = [
                 id: 3,
                 date: "MAY 16",
                 category: "NEWS · WELLNESS",
-                image: Room,
+                image: Gym,
                 name: "Gym & Wellness",
                 path: "/gym",
             }
