@@ -341,7 +341,7 @@ const categoryApi = [
     },
     {
         category: "SPA",
-        path: "/blog",
+        path: "/spa",
         product: [],
     },
     {
