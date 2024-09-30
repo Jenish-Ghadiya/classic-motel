@@ -2,8 +2,8 @@ import React from 'react'
 import "./gymherobanner.scss"
 export default function GymHerobanner() {
   return (
-    <div className="spaherobanner">
-            <div className="spaherobanner-txt">
+    <div className="gym-herobanner">
+            <div className="gym-herobanner-txt">
                 <p>Soothe your soul at motel Wellness Center</p>
                 <h1>Gym & Wellness</h1>
                 <p>

@@ -156,7 +156,7 @@ function Header() {
             <div className="header-container">
                 <div className="header-flex">
                     <div className="header-logo">
-                        <p>CLASSIC MOTEL</p>
+                        <Link>CLASSIC MOTEL</Link>
                     </div>
                     <div className="header-items">
                         {categoryApi.map((item, index) => (

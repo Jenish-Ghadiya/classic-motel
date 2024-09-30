@@ -9,7 +9,7 @@ header {
         justify-content: space-between;
         padding: 24px 0;
         .header-logo {
-            p {
+            a {
                 @include font30;
                 color: var(--theme-primory-color);
                 letter-spacing: 2px;
