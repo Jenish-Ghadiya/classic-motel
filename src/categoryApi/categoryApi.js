@@ -50,10 +50,10 @@ const categoryApi = [
         product: [],
     },
     {
-        category: "PAGES",
-        icon: FaAngleDown,
-        micon: FaCaretDown,
-        path: "/pages",
+        category: "MENU",
+        // icon: FaAngleDown,
+        // micon: FaCaretDown,
+        path: "/food",
         subPages: [
             {
                 id: 1,
@@ -339,6 +339,16 @@ const categoryApi = [
 
         ],
     },
+    {
+        category: "SPA",
+        path: "/blog",
+        product: [],
+    },
+    {
+        category: "WELLNESS",
+        path: "/gym",
+        product: [],
+    },  
     {
         category: "BLOG",
         path: "/blog",
