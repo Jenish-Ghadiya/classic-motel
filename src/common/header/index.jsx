@@ -174,7 +174,7 @@ function Header() {
                             </div>
                         ))}
                         <div className="header-enqury-btn">
-                            <Link to="/login">
+                            <Link to="/enquiry">
                                 <button>Enquire Now</button>
                             </Link>
                         </div>

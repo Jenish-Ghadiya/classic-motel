@@ -43,8 +43,8 @@ const categoryApi = [
     },
     {
         category: "ROOMS",
-        icon: FaAngleDown,
-        micon: FaCaretDown,
+        // icon: FaAngleDown,
+        // micon: FaCaretDown,
         path: "/rooms",
         product: [],
     },
@@ -333,7 +333,7 @@ const categoryApi = [
                 category: "NEWS · WELLNESS",
                 image: Room,
                 name: "Gym & Wellness",
-                path: "/food",
+                path: "/gym",
             }
 
         ],

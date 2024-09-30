@@ -1,20 +1,25 @@
 @import "../../../styles/index.scss";
 
+h4 {
+    @include font16;
+    font-size: 14px;
+    color: var(--theme-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
 .blog-details {
     margin: 50px 0 100px 0;
     .newsletter-section {
         text-align: left;
         margin-bottom: 40px;
-
-        h4 {
-            @include font16;
-            color: var(--theme-gray);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
 
         h2 {
             @include font55;
+            font-size: 50px;
             color: var(--theme-textblack);
             margin: 20px 0;
             font-weight: 100;
@@ -23,19 +28,33 @@
         .newsletter-form {
             display: flex;
             flex-direction: column;
-            max-width: 500px;
 
-            input[type="email"] {
-                border: none;
-                border-bottom: 1px solid var(--theme-gray);
+            .newsletter-input{
+                border-bottom: 1px solid var(--theme-gray) ;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
                 padding: 10px 0;
-                font-size: 18px;
-                margin-bottom: 20px;
-                outline: none;
-                color: var(--theme-textblack);
+                margin: 0 0 10px 0;
 
-                &::placeholder {
-                    color: var(--theme-gray);
+                input[type="email"] {
+                    border: none;
+                    font-size: 18px;
+                    outline: none;
+                    color: var(--theme-textblack);
+                    &::placeholder {
+                        color: var(--theme-gray);
+                    }
+                }
+                .subscribe-btn{
+                    
+                    button{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        border: 0;
+                        background-color: transparent;
+                    }
                 }
             }
 
@@ -68,24 +87,24 @@
         }
     }
     .subscribe-button {
-        display: inline-flex;
+        display: flex;
         align-items: center;
-        padding: 10px 20px;
-        background-color: var(--theme-gray);
-        color: var(--theme-white);
-        border: none;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-size: 16px;
-        letter-spacing: 1px;
-        transition: background-color 0.3s ease;
+        justify-content: center;
+        padding-top: 40px;
+        button{
+            padding: 10px 20px;
+            background-color: var(--theme-gray);
+            color: var(--theme-white);
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
 
-        &:hover {
-            background-color: var(--theme-hover-color);
-        }
-
-        .subscribe-icon {
-            margin-left: 10px;
+            &:hover {
+                background-color: var(--theme-hover-color);
+            }
         }
     }
 }

@@ -4,6 +4,7 @@ import Ig1 from "../../../assets/images/blog/ig-1.jpg";
 import Ig2 from "../../../assets/images/blog/ig-2.jpg";
 import Ig3 from "../../../assets/images/blog/ig-3.jpg";
 import Ig4 from "../../../assets/images/blog/ig-4.jpg";
+import { FaRegPaperPlane } from "react-icons/fa6";
 
 function BlogDetails() {
     return (
@@ -11,16 +12,23 @@ function BlogDetails() {
 
         
         <div className="blog-details ">
+                    <h4>Stay tuned with Clasicmotel</h4>
             <div className="newsletter-section">
                 <div>
-                    <h4>Stay tuned with Cozystay</h4>
                     <h2>
                         Sign up for our newsletter to receive our news, deals,
                         and special offers.
                     </h2>
                 </div>
                 <div className="newsletter-form">
-                    <input type="email" placeholder="Your Email Address" />
+                    <div className="newsletter-input">
+                        <input type="email" placeholder="Your Email Address" />
+                        <div className="subscribe-btn">
+                            <button >
+                                Subscribe<FaRegPaperPlane />
+                            </button>
+                        </div>
+                    </div>
                     <div className="policy-agreement">
                         <input type="checkbox" id="privacy-policy" />
                         <label htmlFor="privacy-policy">
@@ -36,10 +44,11 @@ function BlogDetails() {
                 <img src={Ig3} alt="Image 3" />
                 <img src={Ig4} alt="Image 4" />
             </div>
-            <button className="subscribe-button">
-                Subscribe
-                <span className="subscribe-icon">✉️</span>
-            </button>
+            <div className="subscribe-button">
+                <button>
+                    Subscribe
+                </button>
+            </div>
         </div>
         </div>
     );

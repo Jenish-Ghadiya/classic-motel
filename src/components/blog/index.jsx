@@ -1,33 +1,36 @@
 import React from "react";
 import "./blog.scss";
-import { Link } from "react-router-dom";
 import BlogHeroBanner from "./blogherobanner";
-import categoryApi from "../../categoryApi/categoryApi";
 import BlogDetails from "./blogdetails";
+import categoryApi from "../../categoryApi/categoryApi";
 
 function Blog() {
-    const blogPosts = categoryApi[3].blogPosts;
+    const blogPosts = categoryApi.find(category => category.category === "BLOG").blogPosts;
+
     return (
         <>
             <BlogHeroBanner />
-            <div className="blog-container">
-                <div className="blog-posts">
-                    {blogPosts.map((post) => (
-                        <div key={post.id} className="blog-post">
-                            <img src={post.img} alt={post.title} />
-                            <div className="blog-content">
-                                <h2>{post.title}</h2>
-                                <p className="date">{post.date}</p>
-                                <p>{post.excerpt}</p>
-                                <Link to={post.link} className="read-more">
-                                    Read More
-                                </Link>
+            <div className="container">
+                <div className="blog-details">
+                    <div className="blog-grid">
+                        {blogPosts.map((post) => (
+                            <div className="blog-item" key={post.id}>
+                                <img src={post.img} alt={post.title} />
+                                <div className="blog-info">
+                                    <div className="date">{post.date}</div>
+                                    <div className="categories">
+                                        {post.category && post.category.split(" · ").map((cat, index) => (
+                                            <span key={index}>{cat}</span>
+                                        ))}
+                                    </div>
+                                    <h2>{post.title}</h2>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
-            <BlogDetails/>
+            <BlogDetails />
         </>
     );
 }

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./herobanner.scss";
-import { Link } from "react-router-dom";
-
-function Herobanner() {
+import "./roomavailability.scss";
+export default function RoomAavailability() {
     const [checkIn, setCheckIn] = useState("");
     const [checkOut, setCheckOut] = useState("");
 
@@ -17,31 +15,12 @@ function Herobanner() {
         setCheckIn(formattedDate);
         setCheckOut(formattedDateTomorow);
     }, []);
-
     return (
-        <div className="herobanner-color">
-            <div className="herobanner">
-                <div className="herobanner-details">
-                    <div className="container">
-                        <div className="herobanner-detail">
-                            <h1>Boutique Mountain Chalet</h1>
-                            <p>
-                                The forest paradise of warmth, tranquility and
-                                restoration
-                            </p>
-                            <div className="herobanner-button">
-                                <Link to="/enquiry">
-                                    <button>Enquire Now</button>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="container">
-                <div className="heroabanner-sub-details">
-                    <div className="heroabanner-sub-detail border-right">
-                        <div className="heroabanner-sub-detail-svg">
+        <div className="room-availability">
+            <div className="room-container">
+                <div className="room-heroabanner-sub-details">
+                    <div className="room-heroabanner-sub-detail border-right">
+                        <div className="room-heroabanner-sub-detail-svg">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="30"
@@ -55,8 +34,8 @@ function Herobanner() {
                             <span>{checkIn}</span>
                         </div>
                     </div>
-                    <div className="heroabanner-sub-detail  border-right">
-                        <div className="heroabanner-sub-detail-svg">
+                    <div className="room-heroabanner-sub-detail  border-right">
+                        <div className="room-heroabanner-sub-detail-svg">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="30"
@@ -70,8 +49,8 @@ function Herobanner() {
                             <span>{checkOut}</span>
                         </div>
                     </div>
-                    <div className="heroabanner-sub-detail">
-                        <div className="heroabanner-sub-detail-svg">
+                    <div className="room-heroabanner-sub-detail">
+                        <div className="room-heroabanner-sub-detail-svg">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="30"
@@ -91,5 +70,3 @@ function Herobanner() {
         </div>
     );
 }
-
-export default Herobanner;

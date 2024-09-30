@@ -1,0 +1,59 @@
+@import "../../../styles/index.scss";
+
+.room-details {
+    text-align: center;
+    padding: 80px 0;
+
+    .room-details-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .welcome-text {
+        @include font13;
+        color: #777;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    .main-title {
+        font-size: 55px;
+        font-family: "Marcellus", serif;
+        color: #333;
+        font-weight: 100;
+        max-width: 900px;
+        margin: 0 auto 30px;
+    }
+
+    .description {
+        font-family: "Jost", serif;
+        font-size: 18px;
+        color: #333632;
+        max-width: 1000px;
+        margin: 0 auto 40px;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .btn {
+        font-size: 17px;
+        padding: 15px 38px;
+        border: 1px solid #333;
+        background-color: transparent;
+        font-family: "Marcellus", serif;
+        color: #333;
+        cursor: pointer;
+        font-weight: 400;
+        transition: all 0.3s ease;
+
+        &:hover {
+            border: 1px solid var(--theme-light-brown-color);
+            background-color: var(--theme-light-brown-color);
+            color: #fff;
+        }
+    }
+}
