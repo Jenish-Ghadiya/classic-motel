@@ -22,6 +22,18 @@
         @include font16;
         color: var(--theme-white);
         text-align: center;
+        @media (max-width: 901PX) {
+            font-size: 14px;
+        }
+        @media (max-width: 601PX) {
+            font-size: 12px;
+            line-height: normal;
+            margin: 0 30px;
+        }
+        @media (max-width: 401PX) {
+            font-size: 10px;
+        }
+
     }
     h1 {
         text-align: center;
@@ -29,5 +41,14 @@
         font-size: 70px;
         color: var(--theme-white);
         margin-bottom: 20px;
+        @media (max-width: 901PX) {
+            font-size: 50px;
+        }
+        @media (max-width: 601PX) {
+            font-size: 40px;
+        }
+        @media (max-width: 401PX) {
+            font-size: 30px;
+        }
     }
 }
