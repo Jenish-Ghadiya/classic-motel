@@ -9,10 +9,8 @@ import { FaRegPaperPlane } from "react-icons/fa6";
 function BlogDetails() {
     return (
         <div className="container">
-
-        
         <div className="blog-details ">
-                    <h4>Stay tuned with Clasicmotel</h4>
+            <h4>Stay tuned with Clasicmotel</h4>
             <div className="newsletter-section">
                 <div>
                     <h2>

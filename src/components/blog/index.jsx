@@ -6,7 +6,6 @@ import categoryApi from "../../categoryApi/categoryApi";
 
 function Blog() {
     const blogPosts = categoryApi.find(category => category.category === "BLOG").blogPosts;
-
     return (
         <>
             <BlogHeroBanner />

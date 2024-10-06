@@ -54,7 +54,7 @@
 //                     </div>
 //                 </div>
 //             </div>
-            
+
 //                 <div  className={`menu ${isNavOpen ? "open" : ""}`}>
 //                     <div className="menu-header-flex">
 //                         <div className="menu-header-logo">
@@ -114,7 +114,7 @@
 //                     >
 //                         {categoryApi[3].category}
 //                     </div>
-                    
+
 //                 </div>
 //         </header>
 //     );
@@ -196,30 +196,11 @@ function Header() {
                 </div>
                 {categoryApi.map((item, index) => (
                     <div key={index}>
-                        <div
-                            className="side-menu-item category"
-                            onClick={() => toggleDropdown(index)}
-                        >
-                            {item.category}
-                            {item.micon && <item.micon />}
-                        </div>
-                        {item.micon && (
-                            <div
-                                className={`dropdown-category ${
-                                    dropdownsOpen[index] ? "open" : ""
-                                }`}
-                            >
-                                {categoryApi.map((sub, subIndex) => (
-                                    <Link
-                                        to={sub.path}
-                                        key={subIndex}
-                                        onClick={closeNav}
-                                    >
-                                        {sub.category}
-                                    </Link>
-                                ))}
+                        <Link to={item.path}>
+                            <div className="side-menu-item category">
+                                {item.category}
                             </div>
-                        )}
+                        </Link>
                     </div>
                 ))}
             </div>

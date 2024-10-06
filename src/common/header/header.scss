@@ -35,7 +35,7 @@ header {
                 display: flex;
                 align-items: center;
                 gap: 3px;
-                @media (max-width: 768px) {
+                @media (max-width: 868px) {
                     display: none;
                 }
                 span {
@@ -223,7 +223,14 @@ header {
             border: none;
             box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
                 rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-
+            a{
+                text-decoration: none;
+                color: var(--theme-white);
+            }
+            @media (max-width: 472px) {
+                font-size: 14px;
+                
+            }
             &.category {
                 display: flex;
                 justify-content: space-between;
