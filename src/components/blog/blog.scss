@@ -2,7 +2,15 @@
 
 .blog-details {
     margin: 50px 0 100px 0;
-
+    @media (max-width: 901px) {
+        margin: 30px 0 50px 0;
+    }
+    @media (max-width: 601px) {
+        margin: 20px 0 30px 0;
+    }
+    @media (max-width: 401px) {
+        margin: 20px 0 20px 0;
+    }
     .blog-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -22,6 +30,15 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease;
+            @media (max-width: 901px) {
+                height: 450px;
+            }
+            @media (max-width: 601px) {
+                height: 350px;
+            }
+            @media (max-width: 401px) {
+                height: 250px;
+            }
         }
 
         &:hover img {
@@ -62,6 +79,15 @@
             font-size: 40px;
             font-weight: 800;
             margin: 0;
+            @media (max-width: 901px) {
+                font-size: 30px;
+            }
+            @media (max-width: 601px) {
+                font-size: 20px;
+            }
+            @media (max-width: 401px) {
+                font-size: 15px;
+            }
         }
     }
 }

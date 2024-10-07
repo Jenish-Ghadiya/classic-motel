@@ -18,8 +18,20 @@
     @media (max-width: 601PX) {
         height: 300px;
     }
+    @media (max-width: 401px) {
+        height: 200px;
+    }
     h1 {
         @include font60;
         color: var(--theme-white);
+        @media (max-width: 901px) {
+            font-size: 40px;
+        }
+        @media (max-width: 601px) {
+            font-size: 30px;
+        }
+        @media (max-width: 401px) {
+            font-size: 20px;
+        }
     }
 }

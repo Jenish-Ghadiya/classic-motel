@@ -79,6 +79,13 @@
     }
     .spa-booking {
         margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        justify-content: space-between;
+        @media (max-width: 1001PX) {
+            grid-template-columns: 1fr;
+        }
         @media (max-width: 901PX) {
             margin-top: 15px;
         }
@@ -87,13 +94,6 @@
         }
         @media (max-width: 401PX) {
             margin-top: 5px;
-        }
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        justify-content: space-between;
-        @media (max-width: 1001PX) {
-            grid-template-columns: 1fr;
         }
 
         .spa-description {
