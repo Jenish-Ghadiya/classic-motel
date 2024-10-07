@@ -37,7 +37,7 @@ function Header() {
                     <div className="header-items">
                         {categoryApi.map((item, index) => (
                             <div key={index} className="header-item-flex">
-                                <Link to={item.path}>
+                                <Link to={item.path} >
                                     {item.category}
                                     <div className="border"></div>
                                 </Link>
@@ -72,7 +72,7 @@ function Header() {
                 </div>
                 {categoryApi.map((item, index) => (
                     <div key={index}>
-                        <Link to={item.path}>
+                        <Link to={item.path} onClick={closeNav}>
                             <div className="side-menu-item category">
                                 {item.category}
                             </div>
