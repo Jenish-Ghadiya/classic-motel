@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./header.scss";
 import categoryApi from "../../categoryApi/categoryApi";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AiOutlineMenuFold } from "react-icons/ai";
 
 function Header() {
@@ -37,10 +37,10 @@ function Header() {
                     <div className="header-items">
                         {categoryApi.map((item, index) => (
                             <div key={index} className="header-item-flex">
-                                <Link to={item.path} >
+                                <NavLink activeClassName="active" to={item.path} >
                                     {item.category}
                                     <div className="border"></div>
-                                </Link>
+                                </NavLink>
                                 {item.icon && (
                                     <item.icon
                                         className="down-icon"

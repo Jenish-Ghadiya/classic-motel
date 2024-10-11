@@ -2,6 +2,8 @@ import React from "react";
 import "./lodges.scss";
 import Simgfoure from "../../../assets/images/simg-4.jpg";
 import Simgfive from "../../../assets/images/simg-5.jpg";
+import Simgsix from "../../../assets/images/simg-6.jpg";
+import Simgseven from "../../../assets/images/simg-7.jpg";
 export default function Lodges() {
     return (
         <section className="lodges-section" id="lodges">
@@ -159,7 +161,7 @@ export default function Lodges() {
                     </div>
                     <div className="lodges">
                         <div className="lodges-img">
-                            <img src={Simgfoure} alt="lodges" />
+                            <img src={Simgsix} alt="lodges" />
                             <div className="lodges-img-price">
                                 <p>$400/Niight</p>
                             </div>
@@ -230,7 +232,7 @@ export default function Lodges() {
                     </div>
                     <div className="lodges">
                         <div className="lodges-img">
-                            <img src={Simgfoure} alt="lodges" />
+                            <img src={Simgseven} alt="lodges" />
                             <div className="lodges-img-price">
                                 <p>$400/Niight</p>
                             </div>
