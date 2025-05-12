@@ -82,7 +82,7 @@ export default function FoodDetail() {
                                 </div>
                                 <div className="food-detail-description">
                                     <ul>
-                                        <li> <span>Description : </span><p>{item.description}</p></li>
+                                        <li><span>Description : </span><p>{item.description}</p></li>
                                     </ul>
                                 </div>
                                 <div className="food-detail-btn">

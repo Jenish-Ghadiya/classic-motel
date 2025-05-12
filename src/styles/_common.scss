@@ -5,8 +5,8 @@
 body {
     margin: 0;
     padding: 0;
+    
 }
-
 
 h1,
 h2,
@@ -55,3 +55,7 @@ button {
 ::-webkit-scrollbar-thumb:hover {
     background: #b99d75;
 }
+
+body {
+    cursor: none !important;
+  }

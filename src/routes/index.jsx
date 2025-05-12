@@ -32,25 +32,25 @@ const router = createBrowserRouter([
                 element: <Category />,
             },
             {
-                path:"/fooddetail",
-                element:<FoodDetail/>
+                path: "/fooddetail",
+                element: <FoodDetail />,
             },
             {
-                path:"/cart",
-                element:<Cart/>
+                path: "/cart",
+                element: <Cart />,
             },
             {
-                path:"/spa",
-                element:<Spa/>
+                path: "/spa",
+                element: <Spa />,
             },
             {
-                path:"/enquiry",
-                element:<Enquiry/>
+                path: "/enquiry",
+                element: <Enquiry />,
             },
             {
-                path:"/gym",
-                element:<Gym/>
-            }
+                path: "/gym",
+                element: <Gym />,
+            },
         ],
     },
     {
@@ -59,4 +59,4 @@ const router = createBrowserRouter([
     },
 ]);
 
-export default router;
+export default router;   
